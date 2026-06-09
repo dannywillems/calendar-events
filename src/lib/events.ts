@@ -1,6 +1,7 @@
 import { JSON_SCHEMA, load } from 'js-yaml';
 import eventsYaml from '../../data/events.yaml?raw';
 import { parseDate } from './date';
+import { continentOf } from './geo';
 import {
   KINDS,
   STATUSES,
@@ -128,13 +129,16 @@ function validate(raw: unknown): LoadResult {
       status = obj.status as Status;
     }
 
+    const country = asString(obj.country);
     events.push({
       id: `${index}-${name}`,
       name,
       start,
       end,
       location: asString(obj.location),
-      country: asString(obj.country),
+      country,
+      // Use an explicit continent if given, otherwise derive it from country.
+      continent: asString(obj.continent) ?? continentOf(country),
       field: normalizeField(obj.field),
       kind,
       status,

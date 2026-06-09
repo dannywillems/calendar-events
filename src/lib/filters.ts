@@ -5,16 +5,24 @@ import type { CalEvent, FacetKey } from './types';
 // constraint.
 export interface FilterState {
   field: Set<string>;
+  continent: Set<string>;
   country: Set<string>;
   kind: Set<string>;
   status: Set<string>;
   years: Set<number>;
 }
 
-export const FACET_KEYS: FacetKey[] = ['field', 'country', 'kind', 'status'];
+export const FACET_KEYS: FacetKey[] = [
+  'field',
+  'continent',
+  'country',
+  'kind',
+  'status',
+];
 
 export const FACET_LABELS: Record<FacetKey, string> = {
   field: 'Field',
+  continent: 'Continent',
   country: 'Country',
   kind: 'Kind',
   status: 'Status',
@@ -23,6 +31,7 @@ export const FACET_LABELS: Record<FacetKey, string> = {
 export function emptyFilter(): FilterState {
   return {
     field: new Set(),
+    continent: new Set(),
     country: new Set(),
     kind: new Set(),
     status: new Set(),
@@ -36,6 +45,8 @@ export function facetValues(event: CalEvent, facet: FacetKey): string[] {
   switch (facet) {
     case 'field':
       return event.field;
+    case 'continent':
+      return event.continent ? [event.continent] : [];
     case 'country':
       return event.country ? [event.country] : [];
     case 'kind':
@@ -64,6 +75,7 @@ export function eventYears(event: CalEvent): number[] {
 
 export interface FacetOptions {
   field: string[];
+  continent: string[];
   country: string[];
   kind: string[];
   status: string[];
@@ -92,6 +104,7 @@ export function deriveOptions(events: CalEvent[]): FacetOptions {
 
   return {
     field: collect('field'),
+    continent: collect('continent'),
     country: collect('country'),
     kind: collect('kind'),
     status: collect('status'),
@@ -121,6 +134,7 @@ export function matchesFilter(event: CalEvent, filter: FilterState): boolean {
 export function activeFilterCount(filter: FilterState): number {
   return (
     filter.field.size +
+    filter.continent.size +
     filter.country.size +
     filter.kind.size +
     filter.status.size +

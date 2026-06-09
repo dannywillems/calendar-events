@@ -7,7 +7,7 @@ export type Kind = (typeof KINDS)[number];
 export type Status = (typeof STATUSES)[number];
 
 // The facets a user can filter and color by.
-export type FacetKey = 'field' | 'country' | 'kind' | 'status';
+export type FacetKey = 'field' | 'continent' | 'country' | 'kind' | 'status';
 
 // A normalized, validated event used by the UI. Dates are real Date objects at
 // local midnight; `end` is always set (equal to `start` for single-day events).
@@ -18,6 +18,7 @@ export interface CalEvent {
   end: Date;
   location?: string;
   country?: string;
+  continent?: string;
   field: string[];
   kind?: Kind;
   status?: Status;
