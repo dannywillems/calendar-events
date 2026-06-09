@@ -1,0 +1,78 @@
+# Conference list. Each entry is one event.
+#
+# Required fields:
+#   name   conference name
+#   start  start date, YYYY-MM-DD
+#
+# Optional fields:
+#   end       end date, YYYY-MM-DD (defaults to start for a single-day event)
+#   location  free text, e.g. "Taipei, Taiwan"
+#   country   geography facet, e.g. "Taiwan"
+#   field     subject tags: a single tag or a list, e.g. [infosec, crypto]
+#   kind      one of: academic | industry | business | community
+#   status    one of: confirmed | tentative | interested
+#   url       link to the event website
+#   notes     free text
+
+- name: Real World Crypto 2026
+  start: 2026-03-25
+  end: 2026-03-27
+  location: Taipei, Taiwan
+  country: Taiwan
+  field: [infosec, crypto]
+  kind: academic
+  status: confirmed
+  url: https://rwc.iacr.org/2026/
+  notes: Applied cryptography, single track.
+
+- name: Black Hat USA 2026
+  start: 2026-08-01
+  end: 2026-08-06
+  location: Las Vegas, USA
+  country: USA
+  field: [infosec, offensive]
+  kind: industry
+  status: tentative
+  url: https://www.blackhat.com/
+  notes: Pair with DEF CON the same week.
+
+- name: DEF CON 34
+  start: 2026-08-06
+  end: 2026-08-09
+  location: Las Vegas, USA
+  country: USA
+  field: [infosec, hacking]
+  kind: community
+  status: tentative
+  url: https://defcon.org/
+
+- name: Eurocrypt 2026
+  start: 2026-05-10
+  end: 2026-05-14
+  location: Zagreb, Croatia
+  country: Croatia
+  field: [crypto, theory]
+  kind: academic
+  status: interested
+  url: https://eurocrypt.iacr.org/2026/
+
+- name: FOSDEM 2026
+  start: 2026-01-31
+  end: 2026-02-01
+  location: Brussels, Belgium
+  country: Belgium
+  field: [open-source]
+  kind: community
+  status: confirmed
+  url: https://fosdem.org/2026/
+  notes: Free, no registration. Spans a weekend.
+
+- name: RSA Conference 2027
+  start: 2027-02-15
+  end: 2027-02-19
+  location: San Francisco, USA
+  country: USA
+  field: [infosec, business]
+  kind: business
+  status: interested
+  url: https://www.rsaconference.com/
