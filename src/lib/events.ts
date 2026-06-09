@@ -1,4 +1,4 @@
-import { load } from 'js-yaml';
+import { JSON_SCHEMA, load } from 'js-yaml';
 import eventsYaml from '../../data/events.yaml?raw';
 import { parseDate } from './date';
 import {
@@ -152,7 +152,10 @@ function validate(raw: unknown): LoadResult {
 export function loadEvents(): LoadResult {
   let parsed: unknown;
   try {
-    parsed = load(eventsYaml);
+    // Parse with the JSON schema so unquoted dates like 2026-03-25 stay as
+    // strings instead of being converted to JavaScript Date objects (which the
+    // YAML timestamp type in the default schema would do).
+    parsed = load(eventsYaml, { schema: JSON_SCHEMA });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     return {
