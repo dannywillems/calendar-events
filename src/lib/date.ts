@@ -16,6 +16,21 @@ const MONTH_NAMES = [
   'December',
 ];
 
+const MONTH_SHORT = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 export const WEEKDAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 // Parse a YYYY-MM-DD string into a local-midnight Date. Returns null if the
@@ -83,29 +98,24 @@ export function rangesOverlap(
   return aStart <= bEnd && aEnd >= bStart;
 }
 
-// Format a single-day or multi-day range for display.
+// Format a single-day or multi-day range for display, built explicitly so the
+// output does not depend on locale handling of partial date skeletons.
 export function formatRange(start: Date, end: Date): string {
-  const opts: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  };
+  const m1 = MONTH_SHORT[start.getMonth()];
+  const m2 = MONTH_SHORT[end.getMonth()];
+  const d1 = start.getDate();
+  const d2 = end.getDate();
+  const y1 = start.getFullYear();
+  const y2 = end.getFullYear();
+
   if (sameDay(start, end)) {
-    return start.toLocaleDateString('en-US', opts);
+    return `${m1} ${d1}, ${y1}`;
   }
-  const sameMonth =
-    start.getFullYear() === end.getFullYear() &&
-    start.getMonth() === end.getMonth();
-  if (sameMonth) {
-    const startShort = start.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-    });
-    const endShort = end.toLocaleDateString('en-US', {
-      day: 'numeric',
-      year: 'numeric',
-    });
-    return `${startShort} to ${endShort}`;
+  if (y1 === y2 && start.getMonth() === end.getMonth()) {
+    return `${m1} ${d1}-${d2}, ${y1}`;
   }
-  return `${start.toLocaleDateString('en-US', opts)} to ${end.toLocaleDateString('en-US', opts)}`;
+  if (y1 === y2) {
+    return `${m1} ${d1} - ${m2} ${d2}, ${y1}`;
+  }
+  return `${m1} ${d1}, ${y1} - ${m2} ${d2}, ${y2}`;
 }
