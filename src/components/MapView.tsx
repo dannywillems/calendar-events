@@ -99,6 +99,12 @@ export default function MapView({
             >
               <Tooltip direction="top" offset={[0, -6]}>
                 <span className="font-medium">{event.name}</span>
+                {event.about ? (
+                  <>
+                    <br />
+                    <span className="text-slate-500">{event.about}</span>
+                  </>
+                ) : null}
                 <br />
                 {formatRange(event.start, event.end)}
                 {event.location ? ` - ${event.location}` : ''}

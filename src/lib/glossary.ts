@@ -11,11 +11,6 @@ const DESCRIPTIONS: Record<string, string> = {
   business: 'Business- and decision-maker-oriented event, often with an expo.',
   community: 'Community-run, often volunteer-organized and low-cost.',
 
-  // status
-  confirmed: 'You plan to attend; travel is decided.',
-  tentative: 'Considering attending; not yet decided.',
-  interested: 'On the radar to evaluate later.',
-
   // security fields
   infosec: 'Information security research and practice.',
   offensive: 'Offensive security: exploitation, red teaming, attack research.',

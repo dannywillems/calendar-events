@@ -4,12 +4,10 @@ import { parseDate } from './date';
 import { continentOf, countryCoords } from './geo';
 import {
   KINDS,
-  STATUSES,
   type CalEvent,
   type Kind,
   type LoadError,
   type LoadResult,
-  type Status,
 } from './types';
 
 // Coerce a `field` value (string, list, or missing) into a clean string list.
@@ -122,19 +120,6 @@ function validate(raw: unknown): LoadResult {
       kind = obj.kind as Kind;
     }
 
-    let status: Status | undefined;
-    if (obj.status != null) {
-      if (!STATUSES.includes(obj.status as Status)) {
-        errors.push({
-          index,
-          name,
-          message: `Unknown status: ${String(obj.status)} (expected one of ${STATUSES.join(', ')}).`,
-        });
-        return;
-      }
-      status = obj.status as Status;
-    }
-
     const country = asString(obj.country);
     // Use explicit coordinates when both are given; otherwise fall back to an
     // approximate country center so the event still appears on the map.
@@ -156,7 +141,7 @@ function validate(raw: unknown): LoadResult {
       lng,
       field: normalizeField(obj.field),
       kind,
-      status,
+      about: asString(obj.about),
       url: asString(obj.url),
       notes: asString(obj.notes),
     });

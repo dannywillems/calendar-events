@@ -8,24 +8,16 @@ export interface FilterState {
   continent: Set<string>;
   country: Set<string>;
   kind: Set<string>;
-  status: Set<string>;
   years: Set<number>;
 }
 
-export const FACET_KEYS: FacetKey[] = [
-  'field',
-  'continent',
-  'country',
-  'kind',
-  'status',
-];
+export const FACET_KEYS: FacetKey[] = ['field', 'continent', 'country', 'kind'];
 
 export const FACET_LABELS: Record<FacetKey, string> = {
   field: 'Field',
   continent: 'Continent',
   country: 'Country',
   kind: 'Kind',
-  status: 'Status',
 };
 
 export function emptyFilter(): FilterState {
@@ -34,7 +26,6 @@ export function emptyFilter(): FilterState {
     continent: new Set(),
     country: new Set(),
     kind: new Set(),
-    status: new Set(),
     years: new Set(),
   };
 }
@@ -51,8 +42,6 @@ export function facetValues(event: CalEvent, facet: FacetKey): string[] {
       return event.country ? [event.country] : [];
     case 'kind':
       return event.kind ? [event.kind] : [];
-    case 'status':
-      return event.status ? [event.status] : [];
   }
 }
 
@@ -78,7 +67,6 @@ export interface FacetOptions {
   continent: string[];
   country: string[];
   kind: string[];
-  status: string[];
   years: number[];
 }
 
@@ -107,7 +95,6 @@ export function deriveOptions(events: CalEvent[]): FacetOptions {
     continent: collect('continent'),
     country: collect('country'),
     kind: collect('kind'),
-    status: collect('status'),
     years: [...years].sort((a, b) => a - b),
   };
 }
@@ -137,7 +124,6 @@ export function activeFilterCount(filter: FilterState): number {
     filter.continent.size +
     filter.country.size +
     filter.kind.size +
-    filter.status.size +
     filter.years.size
   );
 }

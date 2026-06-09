@@ -76,7 +76,10 @@ export default function ListView({
                     />
                     <span className="min-w-0 flex-1">
                       <span className="flex flex-wrap items-baseline justify-between gap-x-3">
-                        <span className="font-medium text-slate-900 dark:text-white">
+                        <span
+                          title={event.about}
+                          className="font-medium text-slate-900 dark:text-white"
+                        >
                           {event.name}
                         </span>
                         <span className="text-sm text-slate-500 dark:text-slate-400">
@@ -107,14 +110,6 @@ export default function ListView({
                             {f}
                           </span>
                         ))}
-                        {event.status && (
-                          <span
-                            title={describe(event.status)}
-                            className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300"
-                          >
-                            {event.status}
-                          </span>
-                        )}
                       </span>
                     </span>
                   </button>

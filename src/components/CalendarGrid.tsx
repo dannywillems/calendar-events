@@ -213,7 +213,11 @@ export default function CalendarGrid({
                     >
                       <button
                         type="button"
-                        title={event.name}
+                        title={
+                          event.about
+                            ? `${event.name} - ${event.about}`
+                            : event.name
+                        }
                         onClick={() => onSelect(event)}
                         className={`mx-0.5 flex h-full w-[calc(100%-0.25rem)] items-center overflow-hidden whitespace-nowrap px-1.5 text-xs leading-none ${color.bar} ${
                           roundLeft ? 'rounded-l-md' : ''

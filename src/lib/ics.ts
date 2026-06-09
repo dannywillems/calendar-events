@@ -54,7 +54,6 @@ function buildDescription(event: CalEvent): string {
   }
   const tags = [
     event.kind ? `kind: ${event.kind}` : '',
-    event.status ? `status: ${event.status}` : '',
     event.field.length ? `field: ${event.field.join(', ')}` : '',
     event.country ? `country: ${event.country}` : '',
   ].filter(Boolean);

@@ -43,6 +43,12 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
           </button>
         </div>
 
+        {event.about && (
+          <p className="mb-2 text-sm text-slate-500 dark:text-slate-400">
+            {event.about}
+          </p>
+        )}
+
         <p className="text-sm text-slate-600 dark:text-slate-300">
           {formatRange(event.start, event.end)}
         </p>
@@ -56,7 +62,6 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
 
         <div className="mt-4 flex flex-wrap gap-1.5">
           {event.kind && <Tag label={event.kind} />}
-          {event.status && <Tag label={event.status} />}
           {event.field.map((f) => (
             <Tag key={f} label={f} />
           ))}

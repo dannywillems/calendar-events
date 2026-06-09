@@ -13,8 +13,9 @@
 #              approximate country center, so several events in one country
 #              would stack. Prefer setting the city coordinates.
 #   field      subject tags: a single tag or a list, e.g. [infosec, crypto]
-#   kind       one of: academic | industry | business | community
-#   status     one of: confirmed | tentative | interested
+#   kind       one of: academic | formal-methods | industry | business
+#              | community
+#   about      acronym expansion / short description, shown on name hover
 #   url        link to the event website
 #   notes      free text
 
@@ -29,7 +30,7 @@
   lng: 121.5654
   field: [infosec, crypto]
   kind: academic
-  status: confirmed
+  about: Real World Crypto. Applied cryptography for deployed systems.
   url: https://rwc.iacr.org/2026/
   notes: Applied cryptography, single track.
 
@@ -42,7 +43,7 @@
   lng: 103.8607
   field: [infosec, offensive]
   kind: industry
-  status: interested
+  about: Black Hat. Commercial security conference with trainings and Briefings.
   url: https://blackhat.com/asia-26/
 
 - name: Black Hat USA 2026
@@ -54,7 +55,7 @@
   lng: -115.1758
   field: [infosec, offensive]
   kind: industry
-  status: tentative
+  about: Black Hat. Commercial security conference with trainings and Briefings.
   url: https://blackhat.com/us-26/
   notes: Pair with DEF CON the same week.
 
@@ -67,7 +68,7 @@
   lng: -79.3871
   field: [infosec, offensive]
   kind: industry
-  status: interested
+  about: Black Hat. Commercial security conference with trainings and Briefings.
   url: https://blackhat.com/
 
 - name: Black Hat India 2026
@@ -79,7 +80,7 @@
   lng: 77.5946
   field: [infosec, offensive]
   kind: industry
-  status: interested
+  about: Black Hat. Commercial security conference with trainings and Briefings.
   url: https://www.blackhat-india.com/
   notes: Trainings Oct 27-28, briefings Oct 29-30.
 
@@ -92,7 +93,7 @@
   lng: 46.6753
   field: [infosec, offensive]
   kind: industry
-  status: interested
+  about: Black Hat Middle East and Africa. Regional security conference.
   url: https://blackhatmea.com/
 
 - name: Black Hat Europe 2026
@@ -104,7 +105,7 @@
   lng: 0.0294
   field: [infosec, offensive]
   kind: industry
-  status: interested
+  about: Black Hat. Commercial security conference with trainings and Briefings.
   url: https://blackhat.com/
 
 - name: DEF CON 34
@@ -116,7 +117,7 @@
   lng: -115.1398
   field: [infosec, hacking]
   kind: community
-  status: tentative
+  about: DEF CON. One of the largest and oldest hacker conventions.
   url: https://defcon.org/
 
 - name: RSA Conference 2027
@@ -126,9 +127,10 @@
   country: USA
   lat: 37.7749
   lng: -122.4194
-  field: [infosec, business]
+  field: [infosec]
   kind: business
-  status: interested
+  about:
+    RSA Conference. Large industry security expo, named after the RSA cipher.
   url: https://www.rsaconference.com/
 
 - name: Eurocrypt 2026
@@ -140,7 +142,7 @@
   lng: 12.4964
   field: [crypto, theory]
   kind: academic
-  status: interested
+  about: Annual European cryptology conference, an IACR flagship.
   url: https://eurocrypt.iacr.org/2026/
 
 - name: FOSDEM 2026
@@ -152,7 +154,7 @@
   lng: 4.3807
   field: [open-source]
   kind: community
-  status: confirmed
+  about: Free and Open source Software Developers' European Meeting.
   url: https://fosdem.org/2026/
   notes: Free, no registration. Spans a weekend.
 
@@ -167,7 +169,7 @@
   lng: -104.9678
   field: [blockchain, ethereum]
   kind: community
-  status: interested
+  about: Ethereum community hackathon and conference.
   url: https://www.ethdenver.com/
   notes: BUIDLWeek starts Feb 15, main event Feb 17-21.
 
@@ -180,7 +182,7 @@
   lng: 7.0174
   field: [blockchain, ethereum]
   kind: community
-  status: interested
+  about: Ethereum Community Conference, the largest European Ethereum event.
   url: https://ethcc.io/
 
 - name: Consensus 2026
@@ -192,7 +194,7 @@
   lng: -80.1918
   field: [blockchain, crypto]
   kind: business
-  status: interested
+  about: CoinDesk's flagship crypto and blockchain industry conference.
   url: https://consensus.coindesk.com/
 
 - name: Devcon 8
@@ -204,11 +206,11 @@
   lng: 72.8676
   field: [blockchain, ethereum]
   kind: community
-  status: interested
+  about: The Ethereum Foundation's developer conference.
   url: https://devcon.org/
   notes: Ethereum Foundation developer conference.
 
-# --- Formal methods and verification (academic) ---
+# --- Formal methods and verification ---
 
 - name: VMCAI 2026
   start: 2026-01-12
@@ -218,8 +220,8 @@
   lat: 48.1173
   lng: -1.6778
   field: [verification, static-analysis, formal-methods]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Verification, Model Checking, and Abstract Interpretation.
   url: https://conf.researchr.org/home/VMCAI-2026
 
 - name: ETAPS 2026
@@ -230,8 +232,8 @@
   lat: 45.0703
   lng: 7.6869
   field: [formal-methods, verification, programming-languages]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: European Joint Conferences on Theory and Practice of Software.
   url: https://etaps.org/2026/
 
 - name: TACAS 2026
@@ -242,8 +244,8 @@
   lat: 45.0703
   lng: 7.6869
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Tools and Algorithms for the Construction and Analysis of Systems.
   url: https://etaps.org/2026/conferences/tacas/
 
 - name: ESOP 2026
@@ -254,8 +256,8 @@
   lat: 45.0703
   lng: 7.6869
   field: [programming-languages, type-systems, formal-methods]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: European Symposium on Programming.
   url: https://etaps.org/2026/conferences/esop/
 
 - name: SPIN 2026
@@ -266,8 +268,8 @@
   lat: 45.0703
   lng: 7.6869
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Symposium on Model Checking of Software, named after the SPIN checker.
   url: https://spin-web.github.io/SPIN2026/
 
 - name: NFM 2026
@@ -278,8 +280,8 @@
   lat: 34.0522
   lng: -118.2437
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: NASA Formal Methods Symposium.
   url: https://nfm2026.github.io/
 
 - name: TYPES 2026
@@ -290,8 +292,8 @@
   lat: 57.7089
   lng: 11.9746
   field: [type-systems, theorem-proving, logic, programming-languages]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Types for Proofs and Programs.
   url: https://types2026.cse.chalmers.se/
 
 - name: FM 2026
@@ -302,8 +304,8 @@
   lat: 35.6762
   lng: 139.6503
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: International Symposium on Formal Methods (FME).
   url: https://conf.researchr.org/home/fm-2026
 
 - name: LICS 2026
@@ -314,8 +316,8 @@
   lat: 38.7223
   lng: -9.1393
   field: [logic, formal-methods]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Symposium on Logic in Computer Science.
   url: https://lics.siglog.org/lics26/
 
 - name: CAV 2026
@@ -326,8 +328,8 @@
   lat: 38.7223
   lng: -9.1393
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Computer Aided Verification.
   url: http://conferences.i-cav.org/2026/
 
 - name: ITP 2026
@@ -338,8 +340,8 @@
   lat: 38.7223
   lng: -9.1393
   field: [theorem-proving, logic]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Interactive Theorem Proving.
   url: https://itp-conference-2026.github.io/
 
 - name: IJCAR 2026 (CADE)
@@ -350,8 +352,8 @@
   lat: 38.7223
   lng: -9.1393
   field: [logic, theorem-proving, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: International Joint Conference on Automated Reasoning, subsumes CADE.
   url: https://www.floc26.org/ijcar
   notes: Part of FLoC 2026. Subsumes CADE this year.
 
@@ -363,8 +365,8 @@
   lat: 53.4084
   lng: -2.9916
   field: [concurrency, formal-methods, logic]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: International Conference on Concurrency Theory.
   url: https://confest-2026.github.io/concur/
 
 - name: FMCAD 2026
@@ -375,8 +377,8 @@
   lat: 47.0707
   lng: 15.4395
   field: [formal-methods, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Formal Methods in Computer-Aided Design.
   url: https://fmcad.org/FMCAD26/
 
 - name: SAS 2026
@@ -387,8 +389,8 @@
   lat: 37.8044
   lng: -122.2712
   field: [static-analysis, formal-methods]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Static Analysis Symposium.
   url: https://conf.researchr.org/home/splash-issta-2026/sas-2026
 
 - name: LPAR-26
@@ -399,8 +401,8 @@
   lat: 37.2610
   lng: 23.1580
   field: [logic, theorem-proving, programming-languages]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Logic for Programming, Artificial Intelligence and Reasoning.
   url: https://easychair.org/cfp/lpar26
 
 - name: SEFM 2026
@@ -411,8 +413,8 @@
   lat: 35.8989
   lng: 14.5146
   field: [formal-methods, programming-languages]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Software Engineering and Formal Methods.
   url: https://sefm-conference.github.io/2026/
 
 - name: ATVA 2026
@@ -423,11 +425,11 @@
   lat: 22.3193
   lng: 114.1694
   field: [verification, formal-methods]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Automated Technology for Verification and Analysis.
   url: https://conf.researchr.org/home/aplas-atva-2026
 
-# --- Programming languages and theorem proving (academic) ---
+# --- Programming languages and theorem proving ---
 
 - name: POPL 2026
   start: 2026-01-11
@@ -437,8 +439,8 @@
   lat: 48.1173
   lng: -1.6778
   field: [programming-languages, type-systems, theorem-proving]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Principles of Programming Languages.
   url: https://popl26.sigplan.org/
 
 - name: CPP 2026
@@ -449,8 +451,8 @@
   lat: 48.1173
   lng: -1.6778
   field: [theorem-proving, verification, programming-languages]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: Certified Programs and Proofs.
   url: https://popl26.sigplan.org/home/CPP-2026
 
 - name: PLDI 2026
@@ -462,7 +464,7 @@
   lng: -105.2705
   field: [programming-languages]
   kind: academic
-  status: interested
+  about: Programming Language Design and Implementation.
   url: https://pldi26.sigplan.org/
 
 - name: ICFP 2026
@@ -474,7 +476,7 @@
   lng: -86.1581
   field: [programming-languages, type-systems]
   kind: academic
-  status: interested
+  about: International Conference on Functional Programming.
   url: https://icfp26.sigplan.org/
 
 - name: SPLASH (OOPSLA) 2026
@@ -486,10 +488,10 @@
   lng: -122.2712
   field: [programming-languages]
   kind: academic
-  status: interested
+  about: Systems, Programming, Languages and Applications; hosts OOPSLA.
   url: https://2026.splashcon.org/
 
-# --- Software engineering (academic) ---
+# --- Software engineering ---
 
 - name: ICSE 2026
   start: 2026-04-12
@@ -500,7 +502,7 @@
   lng: -43.1729
   field: [software-engineering]
   kind: academic
-  status: interested
+  about: International Conference on Software Engineering.
   url: https://conf.researchr.org/home/icse-2026
 
 - name: FSE 2026
@@ -512,7 +514,7 @@
   lng: -73.5674
   field: [software-engineering]
   kind: academic
-  status: interested
+  about: Foundations of Software Engineering.
   url: https://conf.researchr.org/home/fse-2026
 
 - name: ISSTA 2026
@@ -523,11 +525,11 @@
   lat: 37.8044
   lng: -122.2712
   field: [software-engineering, verification]
-  kind: academic
-  status: interested
+  kind: formal-methods
+  about: International Symposium on Software Testing and Analysis.
   url: https://2026.splashcon.org/
 
-# --- Artificial intelligence and machine learning (academic) ---
+# --- Artificial intelligence and machine learning ---
 
 - name: AAAI 2026
   start: 2026-01-20
@@ -538,7 +540,7 @@
   lng: 103.8198
   field: [ai]
   kind: academic
-  status: interested
+  about: Association for the Advancement of Artificial Intelligence conference.
   url: https://aaai.org/conference/aaai/aaai-26/
 
 - name: WACV 2026
@@ -550,7 +552,7 @@
   lng: -110.9747
   field: [ai, computer-vision]
   kind: academic
-  status: interested
+  about: Winter Conference on Applications of Computer Vision.
   url: https://wacv.thecvf.com/Conferences/2026
 
 - name: ICLR 2026
@@ -562,7 +564,7 @@
   lng: -43.1729
   field: [ai, machine-learning]
   kind: academic
-  status: interested
+  about: International Conference on Learning Representations.
   url: https://iclr.cc/
 
 - name: AISTATS 2026
@@ -574,7 +576,7 @@
   lng: -5.8340
   field: [ai, machine-learning, statistics]
   kind: academic
-  status: interested
+  about: International Conference on Artificial Intelligence and Statistics.
   url: https://aistats.org/aistats2026/
 
 - name: AAMAS 2026
@@ -586,7 +588,7 @@
   lng: 32.4297
   field: [ai]
   kind: academic
-  status: interested
+  about: Autonomous Agents and Multiagent Systems.
   url: https://www.ifaamas.org/
 
 - name: CVPR 2026
@@ -598,7 +600,7 @@
   lng: -104.9903
   field: [ai, computer-vision]
   kind: academic
-  status: interested
+  about: Conference on Computer Vision and Pattern Recognition.
   url: https://cvpr.thecvf.com/Conferences/2026
 
 - name: COLT 2026
@@ -610,7 +612,7 @@
   lng: -117.1611
   field: [machine-learning, statistics]
   kind: academic
-  status: interested
+  about: Conference on Learning Theory.
   url: https://learningtheory.org/colt2026/
 
 - name: ACL 2026
@@ -622,7 +624,7 @@
   lng: -117.1611
   field: [ai, nlp]
   kind: academic
-  status: interested
+  about: Annual Meeting of the Association for Computational Linguistics.
   url: https://2026.aclweb.org/
 
 - name: ICML 2026
@@ -634,7 +636,7 @@
   lng: 126.9780
   field: [ai, machine-learning]
   kind: academic
-  status: interested
+  about: International Conference on Machine Learning.
   url: https://icml.cc/
 
 - name: SIGGRAPH 2026
@@ -646,7 +648,7 @@
   lng: -118.2437
   field: [graphics, ai]
   kind: academic
-  status: interested
+  about: ACM conference on computer graphics and interactive techniques.
   url: https://s2026.siggraph.org/
 
 - name: KDD 2026
@@ -658,7 +660,7 @@
   lng: 126.5312
   field: [ai, machine-learning, data-mining]
   kind: academic
-  status: interested
+  about: Conference on Knowledge Discovery and Data Mining.
   url: https://kdd2026.kdd.org/
 
 - name: IJCAI-ECAI 2026
@@ -670,7 +672,7 @@
   lng: 8.8017
   field: [ai]
   kind: academic
-  status: interested
+  about: International Joint Conference on AI, joint with ECAI.
   url: https://2026.ijcai.org/
 
 - name: UAI 2026
@@ -682,7 +684,7 @@
   lng: 4.9041
   field: [ai, machine-learning, statistics]
   kind: academic
-  status: interested
+  about: Conference on Uncertainty in Artificial Intelligence.
   url: https://www.auai.org/uai2026/
 
 - name: ECCV 2026
@@ -694,7 +696,7 @@
   lng: 13.0038
   field: [ai, computer-vision]
   kind: academic
-  status: interested
+  about: European Conference on Computer Vision.
   url: https://eccv.ecva.net/
 
 - name: INTERSPEECH 2026
@@ -706,7 +708,7 @@
   lng: 151.2093
   field: [ai, speech]
   kind: academic
-  status: interested
+  about: Conference of the International Speech Communication Association.
   url: https://interspeech2026.org/
 
 - name: EMNLP 2026
@@ -718,7 +720,7 @@
   lng: 19.0402
   field: [ai, nlp]
   kind: academic
-  status: interested
+  about: Empirical Methods in Natural Language Processing.
   url: https://2026.emnlp.org/
 
 - name: CoRL 2026
@@ -730,7 +732,7 @@
   lng: -97.7431
   field: [machine-learning, robotics, reinforcement-learning]
   kind: academic
-  status: interested
+  about: Conference on Robot Learning.
   url: https://www.corl.org/
 
 - name: NeurIPS 2026
@@ -742,5 +744,5 @@
   lng: 151.2093
   field: [ai, machine-learning]
   kind: academic
-  status: interested
+  about: Conference on Neural Information Processing Systems.
   url: https://neurips.cc/

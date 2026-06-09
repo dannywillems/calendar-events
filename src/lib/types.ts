@@ -1,13 +1,17 @@
-// Allowed values for the constrained facets. `field` and `country` are open
-// lists and are not constrained here.
-export const KINDS = ['academic', 'industry', 'business', 'community'] as const;
-export const STATUSES = ['confirmed', 'tentative', 'interested'] as const;
+// Allowed values for the constrained `kind` facet. `field` and `country` are
+// open lists and are not constrained here.
+export const KINDS = [
+  'academic',
+  'formal-methods',
+  'industry',
+  'business',
+  'community',
+] as const;
 
 export type Kind = (typeof KINDS)[number];
-export type Status = (typeof STATUSES)[number];
 
 // The facets a user can filter and color by.
-export type FacetKey = 'field' | 'continent' | 'country' | 'kind' | 'status';
+export type FacetKey = 'field' | 'continent' | 'country' | 'kind';
 
 // A normalized, validated event used by the UI. Dates are real Date objects at
 // local midnight; `end` is always set (equal to `start` for single-day events).
@@ -23,7 +27,8 @@ export interface CalEvent {
   lng?: number;
   field: string[];
   kind?: Kind;
-  status?: Status;
+  // Acronym expansion / short description, shown on name hover.
+  about?: string;
   url?: string;
   notes?: string;
 }
