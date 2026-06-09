@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { AlertTriangle, CalendarDays, Download, List } from 'lucide-react';
+import { AlertTriangle, CalendarDays, Download, List, Map } from 'lucide-react';
 import type { CalEvent, FacetKey } from './lib/types';
 import { loadEvents } from './lib/events';
 import { downloadIcs } from './lib/ics';
@@ -14,10 +14,11 @@ import {
 import FilterBar from './components/FilterBar';
 import CalendarGrid from './components/CalendarGrid';
 import ListView from './components/ListView';
+import MapView from './components/MapView';
 import EventDetail from './components/EventDetail';
 import Legend from './components/Legend';
 
-type View = 'calendar' | 'list';
+type View = 'calendar' | 'list' | 'map';
 
 interface MonthCursor {
   year: number;
@@ -110,6 +111,7 @@ export default function App() {
                 <CalendarDays className="h-4 w-4" />,
               )}
               {viewButton('list', 'List', <List className="h-4 w-4" />)}
+              {viewButton('map', 'Map', <Map className="h-4 w-4" />)}
             </div>
             <button
               type="button"
@@ -160,7 +162,7 @@ export default function App() {
           colorMap={colorMap}
         />
 
-        {view === 'calendar' ? (
+        {view === 'calendar' && (
           <CalendarGrid
             events={filtered}
             year={cursor.year}
@@ -172,8 +174,17 @@ export default function App() {
             onNext={() => stepMonth(1)}
             onToday={goToday}
           />
-        ) : (
+        )}
+        {view === 'list' && (
           <ListView
+            events={filtered}
+            colorFacet={colorFacet}
+            colorMap={colorMap}
+            onSelect={setSelected}
+          />
+        )}
+        {view === 'map' && (
+          <MapView
             events={filtered}
             colorFacet={colorFacet}
             colorMap={colorMap}

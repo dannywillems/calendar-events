@@ -1,7 +1,7 @@
 import { JSON_SCHEMA, load } from 'js-yaml';
 import eventsYaml from '../../data/events.yaml?raw';
 import { parseDate } from './date';
-import { continentOf } from './geo';
+import { continentOf, countryCoords } from './geo';
 import {
   KINDS,
   STATUSES,
@@ -34,6 +34,12 @@ function asString(value: unknown): string | undefined {
     return value.trim();
   }
   return undefined;
+}
+
+function asNumber(value: unknown): number | undefined {
+  return typeof value === 'number' && Number.isFinite(value)
+    ? value
+    : undefined;
 }
 
 // Parse and validate every entry. Bad entries are collected as errors instead
@@ -130,6 +136,13 @@ function validate(raw: unknown): LoadResult {
     }
 
     const country = asString(obj.country);
+    // Use explicit coordinates when both are given; otherwise fall back to an
+    // approximate country center so the event still appears on the map.
+    const explicitLat = asNumber(obj.lat);
+    const explicitLng = asNumber(obj.lng);
+    const fallback = countryCoords(country);
+    const lat = explicitLat ?? fallback?.[0];
+    const lng = explicitLng ?? fallback?.[1];
     events.push({
       id: `${index}-${name}`,
       name,
@@ -139,6 +152,8 @@ function validate(raw: unknown): LoadResult {
       country,
       // Use an explicit continent if given, otherwise derive it from country.
       continent: asString(obj.continent) ?? continentOf(country),
+      lat,
+      lng,
       field: normalizeField(obj.field),
       kind,
       status,

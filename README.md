@@ -9,13 +9,19 @@ Live site: https://dannywillems.github.io/calendar-events/
 
 ## Features
 
-- Month calendar grid with multi-day events drawn as continuous colored spans.
-- List view grouped by year and month.
-- Multi-dimensional tag filtering: filter by field, country, kind, status, and
-  year. Selections are combined with OR within a facet and AND across facets.
-- Color the events by any facet (default: kind), with a matching legend.
+- Three views: month calendar grid (multi-day events as continuous spans), a
+  list grouped by year and month, and a world map of event locations.
+- Multi-dimensional tag filtering: filter by field, continent, country, kind,
+  status, and year, using compact dropdowns. Selections are combined with OR
+  within a facet and AND across facets. Filters apply to all three views.
+- Color the events by any facet (default: kind), with a matching legend; map
+  pins use the same colors.
+- Export the filtered events to an iCalendar (.ics) file.
 - Past events are dimmed, today is marked, filter options are derived from the
   YAML automatically.
+
+The map uses Leaflet with OpenStreetMap tiles. Map tiles are fetched from
+OpenStreetMap servers at runtime when the map view is open.
 
 ## Adding events
 
@@ -30,12 +36,18 @@ Edit `data/events.yaml`. Each entry is one event.
   field: [infosec, crypto] # optional, one tag or a list
   kind: academic # optional: academic | industry | business | community
   status: confirmed # optional: confirmed | tentative | interested
+  lat: 25.0330 # optional, map latitude
+  lng: 121.5654 # optional, map longitude
   url: https://rwc.iacr.org/2026/ # optional
   notes: Single track. # optional
 ```
 
 Only `name` and `start` are required. New `field` and `country` values appear as
-filter options automatically; no code change is needed. Malformed entries (bad
+filter options automatically; no code change is needed. The continent is derived
+from the country (see `src/lib/geo.ts`), or set `continent` explicitly to
+override. For the map, set `lat`/`lng` to the city coordinates; if omitted, the
+map falls back to an approximate country center, so events in the same country
+would stack on one pin. Malformed entries (bad
 date, missing required field, unknown `kind` or `status`) are listed in a banner
 in the app instead of breaking the calendar.
 
@@ -83,5 +95,6 @@ organization page (`<user>.github.io`) or a custom domain, build with
 
 - Vite + React + TypeScript (strict)
 - Tailwind CSS v4
+- Leaflet + react-leaflet (OpenStreetMap tiles) for the map
 - js-yaml for parsing
 - lucide-react for icons

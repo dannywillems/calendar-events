@@ -19,6 +19,8 @@ export interface CalEvent {
   location?: string;
   country?: string;
   continent?: string;
+  lat?: number;
+  lng?: number;
   field: string[];
   kind?: Kind;
   status?: Status;
