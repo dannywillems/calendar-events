@@ -25,16 +25,67 @@
   url: https://rwc.iacr.org/2026/
   notes: Applied cryptography, single track.
 
+- name: Black Hat Asia 2026
+  start: 2026-04-21
+  end: 2026-04-24
+  location: Marina Bay Sands, Singapore
+  country: Singapore
+  field: [infosec, offensive]
+  kind: industry
+  status: interested
+  url: https://blackhat.com/asia-26/
+
 - name: Black Hat USA 2026
   start: 2026-08-01
   end: 2026-08-06
-  location: Las Vegas, USA
+  location: Mandalay Bay, Las Vegas, USA
   country: USA
   field: [infosec, offensive]
   kind: industry
   status: tentative
-  url: https://www.blackhat.com/
+  url: https://blackhat.com/us-26/
   notes: Pair with DEF CON the same week.
+
+- name: Black Hat Canada 2026
+  start: 2026-10-06
+  end: 2026-10-08
+  location: MTCC, Toronto, Canada
+  country: Canada
+  field: [infosec, offensive]
+  kind: industry
+  status: interested
+  url: https://blackhat.com/
+
+- name: Black Hat India 2026
+  start: 2026-10-27
+  end: 2026-10-30
+  location: Sheraton Grand, Bengaluru, India
+  country: India
+  field: [infosec, offensive]
+  kind: industry
+  status: interested
+  url: https://www.blackhat-india.com/
+  notes: Trainings Oct 27-28, briefings Oct 29-30.
+
+- name: Black Hat MEA 2026
+  start: 2026-12-01
+  end: 2026-12-03
+  location: Riyadh, Saudi Arabia
+  country: Saudi Arabia
+  field: [infosec, offensive]
+  kind: industry
+  status: interested
+  url: https://blackhatmea.com/
+
+- name: Black Hat Europe 2026
+  start: 2026-12-07
+  end: 2026-12-10
+  location: ExCeL, London, United Kingdom
+  country: United Kingdom
+  field: [infosec, offensive]
+  kind: industry
+  status: interested
+  url: https://blackhat.com/
 
 - name: DEF CON 34
   start: 2026-08-06
