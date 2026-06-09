@@ -3,6 +3,7 @@ import type { CalEvent, FacetKey } from '../lib/types';
 import { formatRange, monthName, today } from '../lib/date';
 import { colorFor, type ColorMap } from '../lib/colors';
 import { colorValue } from '../lib/filters';
+import { describe } from '../lib/glossary';
 
 interface ListViewProps {
   events: CalEvent[];
@@ -91,6 +92,7 @@ export default function ListView({
                       <span className="mt-1.5 flex flex-wrap gap-1">
                         {event.kind && (
                           <span
+                            title={describe(event.kind)}
                             className={`rounded px-1.5 py-0.5 text-xs ${color.chip}`}
                           >
                             {event.kind}
@@ -99,13 +101,17 @@ export default function ListView({
                         {event.field.map((f) => (
                           <span
                             key={f}
+                            title={describe(f)}
                             className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300"
                           >
                             {f}
                           </span>
                         ))}
                         {event.status && (
-                          <span className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+                          <span
+                            title={describe(event.status)}
+                            className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300"
+                          >
                             {event.status}
                           </span>
                         )}

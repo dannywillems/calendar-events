@@ -1,6 +1,7 @@
 import { ExternalLink, MapPin, X } from 'lucide-react';
 import type { CalEvent } from '../lib/types';
 import { formatRange } from '../lib/date';
+import { describe } from '../lib/glossary';
 
 interface EventDetailProps {
   event: CalEvent;
@@ -9,7 +10,10 @@ interface EventDetailProps {
 
 function Tag({ label }: { label: string }) {
   return (
-    <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-700 dark:bg-slate-700 dark:text-slate-200">
+    <span
+      title={describe(label)}
+      className="rounded-md bg-slate-100 px-2 py-0.5 text-xs text-slate-700 dark:bg-slate-700 dark:text-slate-200"
+    >
       {label}
     </span>
   );

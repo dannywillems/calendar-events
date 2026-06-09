@@ -42,14 +42,18 @@ export default function App() {
   const [colorFacet, setColorFacet] = useState<FacetKey>('kind');
   const [view, setView] = useState<View>('calendar');
   const [selected, setSelected] = useState<CalEvent | null>(null);
+  // Hide events that have already ended by default; trips are planned forward.
+  const [showPast, setShowPast] = useState(false);
   const [cursor, setCursor] = useState<MonthCursor>(() =>
     initialCursor(events),
   );
 
-  const filtered = useMemo(
-    () => events.filter((e) => matchesFilter(e, filter)),
-    [events, filter],
-  );
+  const filtered = useMemo(() => {
+    const now = today();
+    return events.filter(
+      (e) => matchesFilter(e, filter) && (showPast || e.end >= now),
+    );
+  }, [events, filter, showPast]);
   const colorMap = useMemo(
     () => buildColorMap(options[colorFacet]),
     [options, colorFacet],
@@ -154,6 +158,8 @@ export default function App() {
           onToggleYear={toggleYear}
           onClear={() => setFilter(emptyFilter())}
           onColorFacetChange={setColorFacet}
+          showPast={showPast}
+          onToggleShowPast={() => setShowPast((v) => !v)}
         />
 
         <Legend

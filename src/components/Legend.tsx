@@ -1,6 +1,7 @@
 import type { FacetKey } from '../lib/types';
 import { FACET_LABELS } from '../lib/filters';
 import { colorFor, type ColorMap } from '../lib/colors';
+import { describe } from '../lib/glossary';
 
 interface LegendProps {
   facet: FacetKey;
@@ -19,7 +20,11 @@ export default function Legend({ facet, values, colorMap }: LegendProps) {
         {FACET_LABELS[facet]}:
       </span>
       {values.map((value) => (
-        <span key={value} className="flex items-center gap-1.5">
+        <span
+          key={value}
+          title={describe(value)}
+          className="flex items-center gap-1.5"
+        >
           <span
             className={`inline-block h-3 w-3 rounded-full ${colorFor(colorMap, value).dot}`}
           />

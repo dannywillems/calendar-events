@@ -8,6 +8,7 @@ import {
   type FacetOptions,
   type FilterState,
 } from '../lib/filters';
+import { describe } from '../lib/glossary';
 
 interface FilterBarProps {
   options: FacetOptions;
@@ -19,6 +20,8 @@ interface FilterBarProps {
   onToggleYear: (year: number) => void;
   onClear: () => void;
   onColorFacetChange: (facet: FacetKey) => void;
+  showPast: boolean;
+  onToggleShowPast: () => void;
 }
 
 // A compact dropdown that holds a checkbox list. Keeps the filter bar short as
@@ -79,6 +82,7 @@ function MultiSelect({
           {options.map((option) => (
             <label
               key={option}
+              title={describe(option)}
               className="flex cursor-pointer items-center gap-2 rounded px-2 py-1.5 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-700"
             >
               <input
@@ -108,6 +112,8 @@ export default function FilterBar({
   onToggleYear,
   onClear,
   onColorFacetChange,
+  showPast,
+  onToggleShowPast,
 }: FilterBarProps) {
   const active = activeFilterCount(filter);
   const yearOptions = options.years.map(String);
@@ -150,6 +156,19 @@ export default function FilterBar({
               </option>
             ))}
           </select>
+
+          <label
+            title="Show conferences that have already ended"
+            className="ml-2 flex cursor-pointer items-center gap-1.5 font-medium"
+          >
+            <input
+              type="checkbox"
+              checked={showPast}
+              onChange={onToggleShowPast}
+              className="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-400"
+            />
+            Show past
+          </label>
         </div>
 
         <div className="flex items-center gap-3 text-sm">
