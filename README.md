@@ -47,9 +47,9 @@ filter options automatically; no code change is needed. The continent is derived
 from the country (see `src/lib/geo.ts`), or set `continent` explicitly to
 override. For the map, set `lat`/`lng` to the city coordinates; if omitted, the
 map falls back to an approximate country center, so events in the same country
-would stack on one pin. Malformed entries (bad
-date, missing required field, unknown `kind` or `status`) are listed in a banner
-in the app instead of breaking the calendar.
+would stack on one pin. Malformed entries (bad date, missing required field,
+unknown `kind` or `status`) are listed in a banner in the app instead of
+breaking the calendar.
 
 ## Running locally
 
