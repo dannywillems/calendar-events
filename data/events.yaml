@@ -18,9 +18,11 @@
 #   url        link to the event website
 #   notes      free text
 
+# --- Security, cryptography, open source ---
+
 - name: Real World Crypto 2026
-  start: 2026-03-25
-  end: 2026-03-27
+  start: 2026-03-09
+  end: 2026-03-11
   location: Taipei, Taiwan
   country: Taiwan
   lat: 25.0330
@@ -105,13 +107,37 @@
   status: interested
   url: https://blackhat.com/
 
+- name: DEF CON 34
+  start: 2026-08-06
+  end: 2026-08-09
+  location: Las Vegas, USA
+  country: USA
+  lat: 36.1699
+  lng: -115.1398
+  field: [infosec, hacking]
+  kind: community
+  status: tentative
+  url: https://defcon.org/
+
+- name: RSA Conference 2027
+  start: 2027-04-05
+  end: 2027-04-08
+  location: San Francisco, USA
+  country: USA
+  lat: 37.7749
+  lng: -122.4194
+  field: [infosec, business]
+  kind: business
+  status: interested
+  url: https://www.rsaconference.com/
+
 - name: Eurocrypt 2026
   start: 2026-05-10
   end: 2026-05-14
-  location: Zagreb, Croatia
-  country: Croatia
-  lat: 45.8150
-  lng: 15.9819
+  location: Rome, Italy
+  country: Italy
+  lat: 41.9028
+  lng: 12.4964
   field: [crypto, theory]
   kind: academic
   status: interested
@@ -130,29 +156,7 @@
   url: https://fosdem.org/2026/
   notes: Free, no registration. Spans a weekend.
 
-- name: DEF CON 34
-  start: 2026-08-06
-  end: 2026-08-09
-  location: Las Vegas, USA
-  country: USA
-  lat: 36.1699
-  lng: -115.1398
-  field: [infosec, hacking]
-  kind: community
-  status: tentative
-  url: https://defcon.org/
-
-- name: RSA Conference 2027
-  start: 2027-02-15
-  end: 2027-02-19
-  location: San Francisco, USA
-  country: USA
-  lat: 37.7840
-  lng: -122.4014
-  field: [infosec, business]
-  kind: business
-  status: interested
-  url: https://www.rsaconference.com/
+# --- Blockchain ---
 
 - name: ETHDenver 2026
   start: 2026-02-17
@@ -203,3 +207,540 @@
   status: interested
   url: https://devcon.org/
   notes: Ethereum Foundation developer conference.
+
+# --- Formal methods and verification (academic) ---
+
+- name: VMCAI 2026
+  start: 2026-01-12
+  end: 2026-01-13
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [verification, static-analysis, formal-methods]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/VMCAI-2026
+
+- name: ETAPS 2026
+  start: 2026-04-11
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification, programming-languages]
+  kind: academic
+  status: interested
+  url: https://etaps.org/2026/
+
+- name: TACAS 2026
+  start: 2026-04-13
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: https://etaps.org/2026/conferences/tacas/
+
+- name: ESOP 2026
+  start: 2026-04-13
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [programming-languages, type-systems, formal-methods]
+  kind: academic
+  status: interested
+  url: https://etaps.org/2026/conferences/esop/
+
+- name: SPIN 2026
+  start: 2026-04-15
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: https://spin-web.github.io/SPIN2026/
+
+- name: NFM 2026
+  start: 2026-05-05
+  end: 2026-05-07
+  location: Los Angeles, USA
+  country: USA
+  lat: 34.0522
+  lng: -118.2437
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: https://nfm2026.github.io/
+
+- name: TYPES 2026
+  start: 2026-05-04
+  end: 2026-05-08
+  location: Gothenburg, Sweden
+  country: Sweden
+  lat: 57.7089
+  lng: 11.9746
+  field: [type-systems, theorem-proving, logic, programming-languages]
+  kind: academic
+  status: interested
+  url: https://types2026.cse.chalmers.se/
+
+- name: FM 2026
+  start: 2026-05-18
+  end: 2026-05-22
+  location: Tokyo, Japan
+  country: Japan
+  lat: 35.6762
+  lng: 139.6503
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/fm-2026
+
+- name: LICS 2026
+  start: 2026-07-20
+  end: 2026-07-23
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [logic, formal-methods]
+  kind: academic
+  status: interested
+  url: https://lics.siglog.org/lics26/
+
+- name: CAV 2026
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: http://conferences.i-cav.org/2026/
+
+- name: ITP 2026
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [theorem-proving, logic]
+  kind: academic
+  status: interested
+  url: https://itp-conference-2026.github.io/
+
+- name: IJCAR 2026 (CADE)
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [logic, theorem-proving, verification]
+  kind: academic
+  status: interested
+  url: https://www.floc26.org/ijcar
+  notes: Part of FLoC 2026. Subsumes CADE this year.
+
+- name: CONCUR 2026
+  start: 2026-09-01
+  end: 2026-09-05
+  location: Liverpool, United Kingdom
+  country: United Kingdom
+  lat: 53.4084
+  lng: -2.9916
+  field: [concurrency, formal-methods, logic]
+  kind: academic
+  status: interested
+  url: https://confest-2026.github.io/concur/
+
+- name: FMCAD 2026
+  start: 2026-09-14
+  end: 2026-09-18
+  location: Graz, Austria
+  country: Austria
+  lat: 47.0707
+  lng: 15.4395
+  field: [formal-methods, verification]
+  kind: academic
+  status: interested
+  url: https://fmcad.org/FMCAD26/
+
+- name: SAS 2026
+  start: 2026-10-06
+  end: 2026-10-08
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [static-analysis, formal-methods]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/splash-issta-2026/sas-2026
+
+- name: LPAR-26
+  start: 2026-10-25
+  end: 2026-10-30
+  location: Spetses, Greece
+  country: Greece
+  lat: 37.2610
+  lng: 23.1580
+  field: [logic, theorem-proving, programming-languages]
+  kind: academic
+  status: interested
+  url: https://easychair.org/cfp/lpar26
+
+- name: SEFM 2026
+  start: 2026-11-23
+  end: 2026-11-27
+  location: Valletta, Malta
+  country: Malta
+  lat: 35.8989
+  lng: 14.5146
+  field: [formal-methods, programming-languages]
+  kind: academic
+  status: interested
+  url: https://sefm-conference.github.io/2026/
+
+- name: ATVA 2026
+  start: 2026-12-01
+  end: 2026-12-05
+  location: Hong Kong
+  country: Hong Kong
+  lat: 22.3193
+  lng: 114.1694
+  field: [verification, formal-methods]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/aplas-atva-2026
+
+# --- Programming languages and theorem proving (academic) ---
+
+- name: POPL 2026
+  start: 2026-01-11
+  end: 2026-01-17
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [programming-languages, type-systems, theorem-proving]
+  kind: academic
+  status: interested
+  url: https://popl26.sigplan.org/
+
+- name: CPP 2026
+  start: 2026-01-12
+  end: 2026-01-13
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [theorem-proving, verification, programming-languages]
+  kind: academic
+  status: interested
+  url: https://popl26.sigplan.org/home/CPP-2026
+
+- name: PLDI 2026
+  start: 2026-06-15
+  end: 2026-06-19
+  location: Boulder, USA
+  country: USA
+  lat: 40.0150
+  lng: -105.2705
+  field: [programming-languages]
+  kind: academic
+  status: interested
+  url: https://pldi26.sigplan.org/
+
+- name: ICFP 2026
+  start: 2026-08-24
+  end: 2026-08-29
+  location: Indianapolis, USA
+  country: USA
+  lat: 39.7684
+  lng: -86.1581
+  field: [programming-languages, type-systems]
+  kind: academic
+  status: interested
+  url: https://icfp26.sigplan.org/
+
+- name: SPLASH (OOPSLA) 2026
+  start: 2026-10-03
+  end: 2026-10-09
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [programming-languages]
+  kind: academic
+  status: interested
+  url: https://2026.splashcon.org/
+
+# --- Software engineering (academic) ---
+
+- name: ICSE 2026
+  start: 2026-04-12
+  end: 2026-04-18
+  location: Rio de Janeiro, Brazil
+  country: Brazil
+  lat: -22.9068
+  lng: -43.1729
+  field: [software-engineering]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/icse-2026
+
+- name: FSE 2026
+  start: 2026-07-05
+  end: 2026-07-09
+  location: Montreal, Canada
+  country: Canada
+  lat: 45.5019
+  lng: -73.5674
+  field: [software-engineering]
+  kind: academic
+  status: interested
+  url: https://conf.researchr.org/home/fse-2026
+
+- name: ISSTA 2026
+  start: 2026-10-03
+  end: 2026-10-09
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [software-engineering, verification]
+  kind: academic
+  status: interested
+  url: https://2026.splashcon.org/
+
+# --- Artificial intelligence and machine learning (academic) ---
+
+- name: AAAI 2026
+  start: 2026-01-20
+  end: 2026-01-27
+  location: Singapore
+  country: Singapore
+  lat: 1.3521
+  lng: 103.8198
+  field: [ai]
+  kind: academic
+  status: interested
+  url: https://aaai.org/conference/aaai/aaai-26/
+
+- name: WACV 2026
+  start: 2026-03-06
+  end: 2026-03-10
+  location: Tucson, USA
+  country: USA
+  lat: 32.2226
+  lng: -110.9747
+  field: [ai, computer-vision]
+  kind: academic
+  status: interested
+  url: https://wacv.thecvf.com/Conferences/2026
+
+- name: ICLR 2026
+  start: 2026-04-23
+  end: 2026-04-27
+  location: Rio de Janeiro, Brazil
+  country: Brazil
+  lat: -22.9068
+  lng: -43.1729
+  field: [ai, machine-learning]
+  kind: academic
+  status: interested
+  url: https://iclr.cc/
+
+- name: AISTATS 2026
+  start: 2026-05-02
+  end: 2026-05-05
+  location: Tangier, Morocco
+  country: Morocco
+  lat: 35.7595
+  lng: -5.8340
+  field: [ai, machine-learning, statistics]
+  kind: academic
+  status: interested
+  url: https://aistats.org/aistats2026/
+
+- name: AAMAS 2026
+  start: 2026-05-25
+  end: 2026-05-29
+  location: Paphos, Cyprus
+  country: Cyprus
+  lat: 34.7720
+  lng: 32.4297
+  field: [ai]
+  kind: academic
+  status: interested
+  url: https://www.ifaamas.org/
+
+- name: CVPR 2026
+  start: 2026-06-03
+  end: 2026-06-07
+  location: Denver, USA
+  country: USA
+  lat: 39.7392
+  lng: -104.9903
+  field: [ai, computer-vision]
+  kind: academic
+  status: interested
+  url: https://cvpr.thecvf.com/Conferences/2026
+
+- name: COLT 2026
+  start: 2026-06-29
+  end: 2026-07-03
+  location: San Diego, USA
+  country: USA
+  lat: 32.7157
+  lng: -117.1611
+  field: [machine-learning, statistics]
+  kind: academic
+  status: interested
+  url: https://learningtheory.org/colt2026/
+
+- name: ACL 2026
+  start: 2026-07-02
+  end: 2026-07-07
+  location: San Diego, USA
+  country: USA
+  lat: 32.7157
+  lng: -117.1611
+  field: [ai, nlp]
+  kind: academic
+  status: interested
+  url: https://2026.aclweb.org/
+
+- name: ICML 2026
+  start: 2026-07-06
+  end: 2026-07-11
+  location: Seoul, South Korea
+  country: South Korea
+  lat: 37.5665
+  lng: 126.9780
+  field: [ai, machine-learning]
+  kind: academic
+  status: interested
+  url: https://icml.cc/
+
+- name: SIGGRAPH 2026
+  start: 2026-07-19
+  end: 2026-07-23
+  location: Los Angeles, USA
+  country: USA
+  lat: 34.0522
+  lng: -118.2437
+  field: [graphics, ai]
+  kind: academic
+  status: interested
+  url: https://s2026.siggraph.org/
+
+- name: KDD 2026
+  start: 2026-08-09
+  end: 2026-08-13
+  location: Jeju, South Korea
+  country: South Korea
+  lat: 33.4996
+  lng: 126.5312
+  field: [ai, machine-learning, data-mining]
+  kind: academic
+  status: interested
+  url: https://kdd2026.kdd.org/
+
+- name: IJCAI-ECAI 2026
+  start: 2026-08-15
+  end: 2026-08-21
+  location: Bremen, Germany
+  country: Germany
+  lat: 53.0793
+  lng: 8.8017
+  field: [ai]
+  kind: academic
+  status: interested
+  url: https://2026.ijcai.org/
+
+- name: UAI 2026
+  start: 2026-08-17
+  end: 2026-08-21
+  location: Amsterdam, Netherlands
+  country: Netherlands
+  lat: 52.3676
+  lng: 4.9041
+  field: [ai, machine-learning, statistics]
+  kind: academic
+  status: interested
+  url: https://www.auai.org/uai2026/
+
+- name: ECCV 2026
+  start: 2026-09-08
+  end: 2026-09-12
+  location: Malmo, Sweden
+  country: Sweden
+  lat: 55.6050
+  lng: 13.0038
+  field: [ai, computer-vision]
+  kind: academic
+  status: interested
+  url: https://eccv.ecva.net/
+
+- name: INTERSPEECH 2026
+  start: 2026-09-28
+  end: 2026-10-01
+  location: Sydney, Australia
+  country: Australia
+  lat: -33.8688
+  lng: 151.2093
+  field: [ai, speech]
+  kind: academic
+  status: interested
+  url: https://interspeech2026.org/
+
+- name: EMNLP 2026
+  start: 2026-10-24
+  end: 2026-10-29
+  location: Budapest, Hungary
+  country: Hungary
+  lat: 47.4979
+  lng: 19.0402
+  field: [ai, nlp]
+  kind: academic
+  status: interested
+  url: https://2026.emnlp.org/
+
+- name: CoRL 2026
+  start: 2026-11-09
+  end: 2026-11-12
+  location: Austin, USA
+  country: USA
+  lat: 30.2672
+  lng: -97.7431
+  field: [machine-learning, robotics, reinforcement-learning]
+  kind: academic
+  status: interested
+  url: https://www.corl.org/
+
+- name: NeurIPS 2026
+  start: 2026-12-06
+  end: 2026-12-12
+  location: Sydney, Australia
+  country: Australia
+  lat: -33.8688
+  lng: 151.2093
+  field: [ai, machine-learning]
+  kind: academic
+  status: interested
+  url: https://neurips.cc/

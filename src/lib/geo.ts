@@ -29,6 +29,8 @@ const COUNTRY_TO_CONTINENT: Record<string, string> = {
   czechia: 'Europe',
   hungary: 'Europe',
   romania: 'Europe',
+  malta: 'Europe',
+  cyprus: 'Europe',
   'united kingdom': 'Europe',
   uk: 'Europe',
   england: 'Europe',
