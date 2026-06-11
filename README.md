@@ -3,9 +3,9 @@
 A simple, visual-only calendar for tracking conferences and planning trips
 across multiple years. Events are described in a single YAML file. There is no
 backend, no database, and no server: the site is fully static and is built and
-deployed to GitHub Pages by a GitHub Actions workflow.
+deployed to Cloudflare Pages by a GitHub Actions workflow.
 
-Live site: https://dannywillems.github.io/calendar-events/
+Live site: https://calendar-events.pages.dev/
 
 ## Features
 
@@ -72,24 +72,39 @@ make check       # typecheck + format check
 
 ## Deploying
 
-The site deploys automatically to GitHub Pages on every push to `main` via
-`.github/workflows/deploy.yml`.
+The site deploys to Cloudflare Pages on every push to `main` via
+`.github/workflows/deploy.yml`. The repository can stay private: the workflow
+builds in GitHub Actions and uploads only the built `dist/` to Cloudflare with
+Wrangler, so Cloudflare never gets access to the source.
 
-One-time setup in the GitHub repository:
+One-time setup:
 
-1. Go to Settings, then Pages.
-2. Under "Build and deployment", set Source to "GitHub Actions".
+1. Create the Pages project (Direct Upload) once, either in the Cloudflare
+   dashboard (Workers & Pages, Create, Pages, Direct Upload, name it
+   `calendar-events`) or with the CLI:
 
-After that, every push to `main` rebuilds and redeploys the site. You can also
-trigger a deploy manually from the Actions tab (workflow_dispatch).
+   ```bash
+   npx wrangler pages project create calendar-events --production-branch main
+   ```
 
-### Repo name and base path
+2. Create a Cloudflare API token with the `Cloudflare Pages: Edit` permission
+   (dash.cloudflare.com, My Profile, API Tokens). Note your Account ID from the
+   Workers & Pages overview.
 
-This is a project Pages site served from a subpath, so Vite is configured with
-`base = '/calendar-events/'`. The repo name lives in one place,
-`vite.config.ts`. If you rename the repo, update `REPO` there. For a user or
-organization page (`<user>.github.io`) or a custom domain, build with
-`BASE_PATH=/ npm run build`.
+3. Add two GitHub repository secrets (Settings, Secrets and variables, Actions):
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
+
+After that, every push to `main` builds and deploys. The CI workflow
+(`.github/workflows/ci.yml`) type-checks, format-checks, and builds on pull
+requests without deploying. A manual deploy can be triggered from the Actions
+tab (workflow_dispatch).
+
+### Base path
+
+Cloudflare Pages serves the site at the domain root, so Vite uses `base = '/'`
+(in `vite.config.ts`). For sub-path hosting (e.g. a GitHub project page), build
+with `BASE_PATH=/calendar-events/ npm run build`.
 
 ## Tech stack
 

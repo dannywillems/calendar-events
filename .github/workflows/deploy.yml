@@ -1,23 +1,15 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Allow the workflow to publish to GitHub Pages.
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment; do not cancel an in-progress one.
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,18 +27,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+      # Direct upload: only the built dist/ is sent to Cloudflare. Cloudflare
+      # never gets access to the (private) source repository.
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command:
+            pages deploy dist --project-name=calendar-events --branch=main
