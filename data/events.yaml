@@ -1,0 +1,1508 @@
+# Conference list. Each entry is one event.
+#
+# Required fields:
+#   name   conference name
+#   start  start date, YYYY-MM-DD
+#
+# Optional fields:
+#   end        end date, YYYY-MM-DD (defaults to start for a single-day event)
+#   location   free text, e.g. "Taipei, Taiwan"
+#   country    geography facet, e.g. "Taiwan"
+#   continent  overrides the continent derived from country (usually omit)
+#   lat, lng   map coordinates. If omitted, the map falls back to an
+#              approximate country center, so several events in one country
+#              would stack. Prefer setting the city coordinates.
+#   field      subject tags: a single tag or a list, e.g. [infosec, crypto]
+#   kind       one of: academic | formal-methods | industry | business
+#              | community
+#   about      acronym expansion / short description, shown on name hover
+#   url        link to the event website
+#   notes      free text
+
+# --- Security, cryptography, open source ---
+
+- name: Real World Crypto 2026
+  start: 2026-03-09
+  end: 2026-03-11
+  location: Taipei, Taiwan
+  country: Taiwan
+  lat: 25.0330
+  lng: 121.5654
+  field: [infosec, crypto]
+  kind: academic
+  about: Real World Crypto. Applied cryptography for deployed systems.
+  url: https://rwc.iacr.org/2026/
+  notes: Applied cryptography, single track.
+
+- name: Black Hat Asia 2026
+  start: 2026-04-21
+  end: 2026-04-24
+  location: Marina Bay Sands, Singapore
+  country: Singapore
+  lat: 1.2834
+  lng: 103.8607
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat. Commercial security conference with trainings and Briefings.
+  url: https://blackhat.com/asia-26/
+
+- name: Black Hat USA 2026
+  start: 2026-08-01
+  end: 2026-08-06
+  location: Mandalay Bay, Las Vegas, USA
+  country: USA
+  lat: 36.0925
+  lng: -115.1758
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat. Commercial security conference with trainings and Briefings.
+  url: https://blackhat.com/us-26/
+  notes: Pair with DEF CON the same week.
+
+- name: Black Hat Canada 2026
+  start: 2026-10-06
+  end: 2026-10-08
+  location: MTCC, Toronto, Canada
+  country: Canada
+  lat: 43.6426
+  lng: -79.3871
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat. Commercial security conference with trainings and Briefings.
+  url: https://blackhat.com/
+
+- name: Black Hat India 2026
+  start: 2026-10-27
+  end: 2026-10-30
+  location: Sheraton Grand, Bengaluru, India
+  country: India
+  lat: 12.9716
+  lng: 77.5946
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat. Commercial security conference with trainings and Briefings.
+  url: https://www.blackhat-india.com/
+  notes: Trainings Oct 27-28, briefings Oct 29-30.
+
+- name: Black Hat MEA 2026
+  start: 2026-12-01
+  end: 2026-12-03
+  location: Riyadh, Saudi Arabia
+  country: Saudi Arabia
+  lat: 24.7136
+  lng: 46.6753
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat Middle East and Africa. Regional security conference.
+  url: https://blackhatmea.com/
+
+- name: Black Hat Europe 2026
+  start: 2026-12-07
+  end: 2026-12-10
+  location: ExCeL, London, United Kingdom
+  country: United Kingdom
+  lat: 51.5085
+  lng: 0.0294
+  field: [infosec, offensive]
+  kind: industry
+  about: Black Hat. Commercial security conference with trainings and Briefings.
+  url: https://blackhat.com/
+
+- name: DEF CON 34
+  start: 2026-08-06
+  end: 2026-08-09
+  location: Las Vegas, USA
+  country: USA
+  lat: 36.1699
+  lng: -115.1398
+  field: [infosec, hacking]
+  kind: community
+  about: DEF CON. One of the largest and oldest hacker conventions.
+  url: https://defcon.org/
+
+- name: RSA Conference 2027
+  start: 2027-04-05
+  end: 2027-04-08
+  location: San Francisco, USA
+  country: USA
+  lat: 37.7749
+  lng: -122.4194
+  field: [infosec]
+  kind: business
+  about:
+    RSA Conference. Large industry security expo, named after the RSA cipher.
+  url: https://www.rsaconference.com/
+
+- name: Eurocrypt 2026
+  start: 2026-05-10
+  end: 2026-05-14
+  location: Rome, Italy
+  country: Italy
+  lat: 41.9028
+  lng: 12.4964
+  field: [crypto, theory]
+  kind: academic
+  about: Annual European cryptology conference, an IACR flagship.
+  url: https://eurocrypt.iacr.org/2026/
+
+- name: FOSDEM 2026
+  start: 2026-01-31
+  end: 2026-02-01
+  location: Brussels, Belgium
+  country: Belgium
+  lat: 50.8125
+  lng: 4.3807
+  field: [open-source]
+  kind: community
+  about: Free and Open source Software Developers' European Meeting.
+  url: https://fosdem.org/2026/
+  notes: Free, no registration. Spans a weekend.
+
+# --- Blockchain ---
+
+- name: ETHDenver 2026
+  start: 2026-02-17
+  end: 2026-02-21
+  location: National Western Center, Denver, USA
+  country: USA
+  lat: 39.7766
+  lng: -104.9678
+  field: [blockchain, ethereum]
+  kind: community
+  about: Ethereum community hackathon and conference.
+  url: https://www.ethdenver.com/
+  notes: BUIDLWeek starts Feb 15, main event Feb 17-21.
+
+- name: EthCC[9] 2026
+  start: 2026-03-30
+  end: 2026-04-02
+  location: Cannes, France
+  country: France
+  lat: 43.5528
+  lng: 7.0174
+  field: [blockchain, ethereum]
+  kind: community
+  about: Ethereum Community Conference, the largest European Ethereum event.
+  url: https://ethcc.io/
+
+- name: Consensus 2026
+  start: 2026-05-05
+  end: 2026-05-07
+  location: Miami, USA
+  country: USA
+  lat: 25.7617
+  lng: -80.1918
+  field: [blockchain, crypto]
+  kind: business
+  about: CoinDesk's flagship crypto and blockchain industry conference.
+  url: https://consensus.coindesk.com/
+
+- name: Devcon 8
+  start: 2026-11-03
+  end: 2026-11-06
+  location: Jio World Center, Mumbai, India
+  country: India
+  lat: 19.0660
+  lng: 72.8676
+  field: [blockchain, ethereum]
+  kind: community
+  about: The Ethereum Foundation's developer conference.
+  url: https://devcon.org/
+  notes: Ethereum Foundation developer conference.
+
+# --- Formal methods and verification ---
+
+- name: VMCAI 2026
+  start: 2026-01-12
+  end: 2026-01-13
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [verification, static-analysis, formal-methods]
+  kind: formal-methods
+  about: Verification, Model Checking, and Abstract Interpretation.
+  url: https://conf.researchr.org/home/VMCAI-2026
+
+- name: ETAPS 2026
+  start: 2026-04-11
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification, programming-languages]
+  kind: formal-methods
+  about: European Joint Conferences on Theory and Practice of Software.
+  url: https://etaps.org/2026/
+
+- name: TACAS 2026
+  start: 2026-04-13
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: Tools and Algorithms for the Construction and Analysis of Systems.
+  url: https://etaps.org/2026/conferences/tacas/
+
+- name: ESOP 2026
+  start: 2026-04-13
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [programming-languages, type-systems, formal-methods]
+  kind: formal-methods
+  about: European Symposium on Programming.
+  url: https://etaps.org/2026/conferences/esop/
+
+- name: SPIN 2026
+  start: 2026-04-15
+  end: 2026-04-16
+  location: Turin, Italy
+  country: Italy
+  lat: 45.0703
+  lng: 7.6869
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: Symposium on Model Checking of Software, named after the SPIN checker.
+  url: https://spin-web.github.io/SPIN2026/
+
+- name: NFM 2026
+  start: 2026-05-05
+  end: 2026-05-07
+  location: Los Angeles, USA
+  country: USA
+  lat: 34.0522
+  lng: -118.2437
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: NASA Formal Methods Symposium.
+  url: https://nfm2026.github.io/
+
+- name: TYPES 2026
+  start: 2026-05-04
+  end: 2026-05-08
+  location: Gothenburg, Sweden
+  country: Sweden
+  lat: 57.7089
+  lng: 11.9746
+  field: [type-systems, theorem-proving, logic, programming-languages]
+  kind: formal-methods
+  about: Types for Proofs and Programs.
+  url: https://types2026.cse.chalmers.se/
+
+- name: FM 2026
+  start: 2026-05-18
+  end: 2026-05-22
+  location: Tokyo, Japan
+  country: Japan
+  lat: 35.6762
+  lng: 139.6503
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: International Symposium on Formal Methods (FME).
+  url: https://conf.researchr.org/home/fm-2026
+
+- name: LICS 2026
+  start: 2026-07-20
+  end: 2026-07-23
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [logic, formal-methods]
+  kind: formal-methods
+  about: Symposium on Logic in Computer Science.
+  url: https://lics.siglog.org/lics26/
+
+- name: CAV 2026
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: Computer Aided Verification.
+  url: http://conferences.i-cav.org/2026/
+
+- name: ITP 2026
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [theorem-proving, logic]
+  kind: formal-methods
+  about: Interactive Theorem Proving.
+  url: https://itp-conference-2026.github.io/
+
+- name: IJCAR 2026 (CADE)
+  start: 2026-07-26
+  end: 2026-07-29
+  location: Lisbon, Portugal
+  country: Portugal
+  lat: 38.7223
+  lng: -9.1393
+  field: [logic, theorem-proving, verification]
+  kind: formal-methods
+  about: International Joint Conference on Automated Reasoning, subsumes CADE.
+  url: https://www.floc26.org/ijcar
+  notes: Part of FLoC 2026. Subsumes CADE this year.
+
+- name: CONCUR 2026
+  start: 2026-09-01
+  end: 2026-09-05
+  location: Liverpool, United Kingdom
+  country: United Kingdom
+  lat: 53.4084
+  lng: -2.9916
+  field: [concurrency, formal-methods, logic]
+  kind: formal-methods
+  about: International Conference on Concurrency Theory.
+  url: https://confest-2026.github.io/concur/
+
+- name: FMCAD 2026
+  start: 2026-09-14
+  end: 2026-09-18
+  location: Graz, Austria
+  country: Austria
+  lat: 47.0707
+  lng: 15.4395
+  field: [formal-methods, verification]
+  kind: formal-methods
+  about: Formal Methods in Computer-Aided Design.
+  url: https://fmcad.org/FMCAD26/
+
+- name: SAS 2026
+  start: 2026-10-06
+  end: 2026-10-08
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [static-analysis, formal-methods]
+  kind: formal-methods
+  about: Static Analysis Symposium.
+  url: https://conf.researchr.org/home/splash-issta-2026/sas-2026
+
+- name: LPAR-26
+  start: 2026-10-25
+  end: 2026-10-30
+  location: Spetses, Greece
+  country: Greece
+  lat: 37.2610
+  lng: 23.1580
+  field: [logic, theorem-proving, programming-languages]
+  kind: formal-methods
+  about: Logic for Programming, Artificial Intelligence and Reasoning.
+  url: https://easychair.org/cfp/lpar26
+
+- name: SEFM 2026
+  start: 2026-11-23
+  end: 2026-11-27
+  location: Valletta, Malta
+  country: Malta
+  lat: 35.8989
+  lng: 14.5146
+  field: [formal-methods, programming-languages]
+  kind: formal-methods
+  about: Software Engineering and Formal Methods.
+  url: https://sefm-conference.github.io/2026/
+
+- name: ATVA 2026
+  start: 2026-12-01
+  end: 2026-12-05
+  location: Hong Kong
+  country: Hong Kong
+  lat: 22.3193
+  lng: 114.1694
+  field: [verification, formal-methods]
+  kind: formal-methods
+  about: Automated Technology for Verification and Analysis.
+  url: https://conf.researchr.org/home/aplas-atva-2026
+
+# --- Programming languages and theorem proving ---
+
+- name: POPL 2026
+  start: 2026-01-11
+  end: 2026-01-17
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [programming-languages, type-systems, theorem-proving]
+  kind: formal-methods
+  about: Principles of Programming Languages.
+  url: https://popl26.sigplan.org/
+
+- name: CPP 2026
+  start: 2026-01-12
+  end: 2026-01-13
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [theorem-proving, verification, programming-languages]
+  kind: formal-methods
+  about: Certified Programs and Proofs.
+  url: https://popl26.sigplan.org/home/CPP-2026
+
+- name: PLDI 2026
+  start: 2026-06-15
+  end: 2026-06-19
+  location: Boulder, USA
+  country: USA
+  lat: 40.0150
+  lng: -105.2705
+  field: [programming-languages]
+  kind: academic
+  about: Programming Language Design and Implementation.
+  url: https://pldi26.sigplan.org/
+
+- name: ICFP 2026
+  start: 2026-08-24
+  end: 2026-08-29
+  location: Indianapolis, USA
+  country: USA
+  lat: 39.7684
+  lng: -86.1581
+  field: [programming-languages, type-systems]
+  kind: academic
+  about: International Conference on Functional Programming.
+  url: https://icfp26.sigplan.org/
+
+- name: SPLASH (OOPSLA) 2026
+  start: 2026-10-03
+  end: 2026-10-09
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [programming-languages]
+  kind: academic
+  about: Systems, Programming, Languages and Applications; hosts OOPSLA.
+  url: https://2026.splashcon.org/
+
+# --- Software engineering ---
+
+- name: ICSE 2026
+  start: 2026-04-12
+  end: 2026-04-18
+  location: Rio de Janeiro, Brazil
+  country: Brazil
+  lat: -22.9068
+  lng: -43.1729
+  field: [software-engineering]
+  kind: academic
+  about: International Conference on Software Engineering.
+  url: https://conf.researchr.org/home/icse-2026
+
+- name: FSE 2026
+  start: 2026-07-05
+  end: 2026-07-09
+  location: Montreal, Canada
+  country: Canada
+  lat: 45.5019
+  lng: -73.5674
+  field: [software-engineering]
+  kind: academic
+  about: Foundations of Software Engineering.
+  url: https://conf.researchr.org/home/fse-2026
+
+- name: ISSTA 2026
+  start: 2026-10-03
+  end: 2026-10-09
+  location: Oakland, USA
+  country: USA
+  lat: 37.8044
+  lng: -122.2712
+  field: [software-engineering, verification]
+  kind: formal-methods
+  about: International Symposium on Software Testing and Analysis.
+  url: https://2026.splashcon.org/
+
+# --- Artificial intelligence and machine learning ---
+
+- name: AAAI 2026
+  start: 2026-01-20
+  end: 2026-01-27
+  location: Singapore
+  country: Singapore
+  lat: 1.3521
+  lng: 103.8198
+  field: [ai]
+  kind: academic
+  about: Association for the Advancement of Artificial Intelligence conference.
+  url: https://aaai.org/conference/aaai/aaai-26/
+
+- name: WACV 2026
+  start: 2026-03-06
+  end: 2026-03-10
+  location: Tucson, USA
+  country: USA
+  lat: 32.2226
+  lng: -110.9747
+  field: [ai, computer-vision]
+  kind: academic
+  about: Winter Conference on Applications of Computer Vision.
+  url: https://wacv.thecvf.com/Conferences/2026
+
+- name: ICLR 2026
+  start: 2026-04-23
+  end: 2026-04-27
+  location: Rio de Janeiro, Brazil
+  country: Brazil
+  lat: -22.9068
+  lng: -43.1729
+  field: [ai, machine-learning]
+  kind: academic
+  about: International Conference on Learning Representations.
+  url: https://iclr.cc/
+
+- name: AISTATS 2026
+  start: 2026-05-02
+  end: 2026-05-05
+  location: Tangier, Morocco
+  country: Morocco
+  lat: 35.7595
+  lng: -5.8340
+  field: [ai, machine-learning, statistics]
+  kind: academic
+  about: International Conference on Artificial Intelligence and Statistics.
+  url: https://aistats.org/aistats2026/
+
+- name: AAMAS 2026
+  start: 2026-05-25
+  end: 2026-05-29
+  location: Paphos, Cyprus
+  country: Cyprus
+  lat: 34.7720
+  lng: 32.4297
+  field: [ai]
+  kind: academic
+  about: Autonomous Agents and Multiagent Systems.
+  url: https://www.ifaamas.org/
+
+- name: CVPR 2026
+  start: 2026-06-03
+  end: 2026-06-07
+  location: Denver, USA
+  country: USA
+  lat: 39.7392
+  lng: -104.9903
+  field: [ai, computer-vision]
+  kind: academic
+  about: Conference on Computer Vision and Pattern Recognition.
+  url: https://cvpr.thecvf.com/Conferences/2026
+
+- name: COLT 2026
+  start: 2026-06-29
+  end: 2026-07-03
+  location: San Diego, USA
+  country: USA
+  lat: 32.7157
+  lng: -117.1611
+  field: [machine-learning, statistics]
+  kind: academic
+  about: Conference on Learning Theory.
+  url: https://learningtheory.org/colt2026/
+
+- name: ACL 2026
+  start: 2026-07-02
+  end: 2026-07-07
+  location: San Diego, USA
+  country: USA
+  lat: 32.7157
+  lng: -117.1611
+  field: [ai, nlp]
+  kind: academic
+  about: Annual Meeting of the Association for Computational Linguistics.
+  url: https://2026.aclweb.org/
+
+- name: ICML 2026
+  start: 2026-07-06
+  end: 2026-07-11
+  location: Seoul, South Korea
+  country: South Korea
+  lat: 37.5665
+  lng: 126.9780
+  field: [ai, machine-learning]
+  kind: academic
+  about: International Conference on Machine Learning.
+  url: https://icml.cc/
+
+- name: SIGGRAPH 2026
+  start: 2026-07-19
+  end: 2026-07-23
+  location: Los Angeles, USA
+  country: USA
+  lat: 34.0522
+  lng: -118.2437
+  field: [graphics, ai]
+  kind: academic
+  about: ACM conference on computer graphics and interactive techniques.
+  url: https://s2026.siggraph.org/
+
+- name: KDD 2026
+  start: 2026-08-09
+  end: 2026-08-13
+  location: Jeju, South Korea
+  country: South Korea
+  lat: 33.4996
+  lng: 126.5312
+  field: [ai, machine-learning, data-mining]
+  kind: academic
+  about: Conference on Knowledge Discovery and Data Mining.
+  url: https://kdd2026.kdd.org/
+
+- name: IJCAI-ECAI 2026
+  start: 2026-08-15
+  end: 2026-08-21
+  location: Bremen, Germany
+  country: Germany
+  lat: 53.0793
+  lng: 8.8017
+  field: [ai]
+  kind: academic
+  about: International Joint Conference on AI, joint with ECAI.
+  url: https://2026.ijcai.org/
+
+- name: UAI 2026
+  start: 2026-08-17
+  end: 2026-08-21
+  location: Amsterdam, Netherlands
+  country: Netherlands
+  lat: 52.3676
+  lng: 4.9041
+  field: [ai, machine-learning, statistics]
+  kind: academic
+  about: Conference on Uncertainty in Artificial Intelligence.
+  url: https://www.auai.org/uai2026/
+
+- name: ECCV 2026
+  start: 2026-09-08
+  end: 2026-09-12
+  location: Malmo, Sweden
+  country: Sweden
+  lat: 55.6050
+  lng: 13.0038
+  field: [ai, computer-vision]
+  kind: academic
+  about: European Conference on Computer Vision.
+  url: https://eccv.ecva.net/
+
+- name: INTERSPEECH 2026
+  start: 2026-09-28
+  end: 2026-10-01
+  location: Sydney, Australia
+  country: Australia
+  lat: -33.8688
+  lng: 151.2093
+  field: [ai, speech]
+  kind: academic
+  about: Conference of the International Speech Communication Association.
+  url: https://interspeech2026.org/
+
+- name: EMNLP 2026
+  start: 2026-10-24
+  end: 2026-10-29
+  location: Budapest, Hungary
+  country: Hungary
+  lat: 47.4979
+  lng: 19.0402
+  field: [ai, nlp]
+  kind: academic
+  about: Empirical Methods in Natural Language Processing.
+  url: https://2026.emnlp.org/
+
+- name: CoRL 2026
+  start: 2026-11-09
+  end: 2026-11-12
+  location: Austin, USA
+  country: USA
+  lat: 30.2672
+  lng: -97.7431
+  field: [machine-learning, robotics, reinforcement-learning]
+  kind: academic
+  about: Conference on Robot Learning.
+  url: https://www.corl.org/
+
+- name: NeurIPS 2026
+  start: 2026-12-06
+  end: 2026-12-12
+  location: Sydney, Australia
+  country: Australia
+  lat: -33.8688
+  lng: 151.2093
+  field: [ai, machine-learning]
+  kind: academic
+  about: Conference on Neural Information Processing Systems.
+  url: https://neurips.cc/
+
+# --- Industry cybersecurity: general (Europe, US, MEA) ---
+
+- name: AREA41 2026
+  start: 2026-06-18
+  end: 2026-06-19
+  location: Zurich, Switzerland
+  country: Switzerland
+  lat: 47.3769
+  lng: 8.5417
+  field: [infosec, offensive, defensive]
+  kind: community
+  about: Switzerland's hacker and security conference (DEF CON Switzerland).
+  url: https://area41.io/
+
+- name: TROOPERS 2026
+  start: 2026-06-22
+  end: 2026-06-26
+  location: Heidelberg, Germany
+  country: Germany
+  lat: 49.3988
+  lng: 8.6724
+  field: [infosec, offensive, defensive, cloud, appsec]
+  kind: industry
+  about: Deep-dive IT security conference and trainings.
+  url: https://troopers.de/
+
+- name: leHACK 2026
+  start: 2026-06-26
+  end: 2026-06-27
+  location: Paris, France
+  country: France
+  lat: 48.8566
+  lng: 2.3522
+  field: [infosec, offensive, osint]
+  kind: community
+  about: Oldest French hacking-scene event, organised by HackerZVoice.
+  url: https://lehack.org/
+
+- name: Pass the SALT 2026
+  start: 2026-06-30
+  end: 2026-07-02
+  location: Lille, France
+  country: France
+  lat: 50.6292
+  lng: 3.0573
+  field: [infosec, offensive, threat-intel, osint, appsec]
+  kind: community
+  about:
+    Free conference on free software and security (Security And Libre Talks).
+  url: https://2026.pass-the-salt.org/
+
+- name: SteelCon 2026
+  start: 2026-07-10
+  end: 2026-07-12
+  location: Sheffield, United Kingdom
+  country: United Kingdom
+  lat: 53.3811
+  lng: -1.4701
+  field: [infosec, offensive, defensive]
+  kind: community
+  about: Community-driven UK hacker conference at Sheffield Hallam University.
+  url: https://www.steelcon.info/
+
+- name: BSides Las Vegas 2026
+  start: 2026-08-03
+  end: 2026-08-05
+  location: Las Vegas, USA
+  country: USA
+  lat: 36.1699
+  lng: -115.1398
+  field: [infosec, offensive, defensive, osint, appsec]
+  kind: community
+  about: Community security con during Hacker Summer Camp week.
+  url: https://bsideslv.org/
+
+- name: CYBR.SEC.CON 2026
+  start: 2026-09-15
+  end: 2026-09-16
+  location: Houston, USA
+  country: USA
+  lat: 29.7604
+  lng: -95.3698
+  field: [infosec, defensive, grc, threat-intel]
+  kind: industry
+  about: Successor to HOU.SEC.CON, by the original team.
+  url: https://www.cybrseccon.com/
+
+- name: 44CON 2026
+  start: 2026-09-17
+  end: 2026-09-18
+  location: London, United Kingdom
+  country: United Kingdom
+  lat: 51.5072
+  lng: -0.1276
+  field: [infosec, offensive, defensive, appsec]
+  kind: community
+  about: London cybersecurity conference with talks, workshops, and trainings.
+  url: https://44con.com/
+
+- name: BruCON 2026
+  start: 2026-09-24
+  end: 2026-09-25
+  location: Mechelen, Belgium
+  country: Belgium
+  lat: 51.0259
+  lng: 4.4776
+  field: [infosec, offensive, defensive, appsec]
+  kind: community
+  about:
+    Belgian security and hacker conference and training (BRUssels CONference).
+  url: https://www.brucon.org/
+
+- name: GrrCON 2026
+  start: 2026-09-24
+  end: 2026-09-25
+  location: Grand Rapids, USA
+  country: USA
+  lat: 42.9634
+  lng: -85.6681
+  field: [infosec, offensive, defensive, threat-intel, hardware]
+  kind: community
+  about: Midwest cyber security summit and hacker conference.
+  url: https://grrcon.com/
+
+- name: RomHack Camp 2026
+  start: 2026-10-02
+  end: 2026-10-04
+  location: Rome, Italy
+  country: Italy
+  lat: 41.9028
+  lng: 12.4964
+  field: [infosec, offensive, defensive]
+  kind: community
+  about: Italian community security conference by Cyber Saiyan.
+  url: https://romhack.io/
+
+- name: SecTor 2026
+  start: 2026-10-05
+  end: 2026-10-08
+  location: Toronto, Canada
+  country: Canada
+  lat: 43.6532
+  lng: -79.3832
+  field: [infosec, offensive, defensive, threat-intel, appsec]
+  kind: industry
+  about:
+    Security Education Conference Toronto, Canada's security con, by Black Hat.
+  url: https://blackhat.com/sector/
+
+- name: Wild West Hackin' Fest 2026
+  start: 2026-10-07
+  end: 2026-10-09
+  location: Deadwood, USA
+  country: USA
+  lat: 44.3767
+  lng: -103.7296
+  field: [infosec, offensive, defensive, threat-intel, attack-surface]
+  kind: community
+  about: Hands-on hacker con by Black Hills Information Security.
+  url: https://wildwesthackinfest.com/
+
+- name: No Hat 2026
+  start: 2026-10-10
+  end: 2026-10-10
+  location: Bergamo, Italy
+  country: Italy
+  lat: 45.6983
+  lng: 9.6773
+  field: [infosec, offensive, privacy]
+  kind: community
+  about: Italian computer security conference by Berghem-in-the-Middle.
+  url: https://www.nohat.it/
+
+- name: hack.lu 2026
+  start: 2026-10-20
+  end: 2026-10-23
+  location: Luxembourg City, Luxembourg
+  country: Luxembourg
+  lat: 49.6116
+  lng: 6.1319
+  field: [infosec, offensive, threat-intel, privacy]
+  kind: community
+  about: Open security, privacy and IT convention (20th edition).
+  url: https://2026.hack.lu/
+
+- name: Hacktivity 2026
+  start: 2026-10-21
+  end: 2026-10-21
+  location: Budapest, Hungary
+  country: Hungary
+  lat: 47.4979
+  lng: 19.0402
+  field: [infosec, offensive, defensive]
+  kind: community
+  about: IT security festival of Central and Eastern Europe.
+  url: https://hacktivity.com/
+
+- name: it-sa 2026
+  start: 2026-10-27
+  end: 2026-10-29
+  location: Nuremberg, Germany
+  country: Germany
+  lat: 49.4521
+  lng: 11.0767
+  field: [infosec, defensive, grc, cloud, appsec]
+  kind: business
+  about: it-sa Expo&Congress, one of Europe's largest IT security trade fairs.
+  url: https://www.itsa365.de/en/it-sa-expo-congress
+
+- name: SAINTCON 2026
+  start: 2026-10-27
+  end: 2026-10-30
+  location: Provo, USA
+  country: USA
+  lat: 40.2338
+  lng: -111.6585
+  field: [infosec, offensive, defensive, hardware]
+  kind: community
+  about: Utah's community hacker conference.
+  url: https://saintcon.org/
+
+- name: Nullcon Berlin 2026
+  start: 2026-11-05
+  end: 2026-11-06
+  location: Berlin, Germany
+  country: Germany
+  lat: 52.5200
+  lng: 13.4050
+  field: [infosec, offensive, defensive, appsec]
+  kind: industry
+  about: Nullcon security conference and training, Berlin (Europe) edition.
+  url: https://nullcon.net/
+
+- name: BSides Berlin 2026
+  start: 2026-11-13
+  end: 2026-11-13
+  location: Berlin, Germany
+  country: Germany
+  lat: 52.5200
+  lng: 13.4050
+  field: [infosec, offensive, defensive, appsec]
+  kind: community
+  about: Community-driven Security BSides event in Berlin.
+  url: https://bsides.berlin/
+
+- name: DeepSec 2026
+  start: 2026-11-17
+  end: 2026-11-20
+  location: Vienna, Austria
+  country: Austria
+  lat: 48.2082
+  lng: 16.3738
+  field: [infosec, offensive, defensive, threat-intel]
+  kind: industry
+  about: DeepSec In-Depth Security Conference (IDSC) Europe.
+  url: https://deepsec.net/
+
+- name: BSides London 2026
+  start: 2026-12-12
+  end: 2026-12-12
+  location: London, United Kingdom
+  country: United Kingdom
+  lat: 51.5072
+  lng: -0.1276
+  field: [infosec, offensive, defensive, appsec]
+  kind: community
+  about: Free, community-driven Security BSides event in London.
+  url: https://bsides.london/
+
+- name: Insomni'hack 2027
+  start: 2027-02-04
+  end: 2027-02-05
+  location: Lausanne, Switzerland
+  country: Switzerland
+  lat: 46.5197
+  lng: 6.6323
+  field: [infosec, offensive, defensive, appsec]
+  kind: community
+  about: Swiss ethical hacking conference and CTF with preceding trainings.
+  url: https://insomnihack.ch/
+
+- name: CypherCon 10
+  start: 2027-03-24
+  end: 2027-03-25
+  location: Milwaukee, USA
+  country: USA
+  lat: 43.0389
+  lng: -87.9065
+  field: [infosec, offensive, hardware, osint]
+  kind: community
+  about: Wisconsin hacker conference (10th anniversary).
+  url: https://cyphercon.com/
+
+- name: NorthSec 2027
+  start: 2027-05-20
+  end: 2027-05-21
+  location: Montreal, Canada
+  country: Canada
+  lat: 45.5019
+  lng: -73.5674
+  field: [infosec, offensive, appsec, hardware]
+  kind: community
+  about: Technical conference and large-scale CTF in Montreal.
+  url: https://nsec.io/
+
+# --- Industry cybersecurity: business expos and trade shows ---
+
+- name: CYBERSEC EXPO & FORUM 2026
+  start: 2026-06-15
+  end: 2026-06-16
+  location: Katowice, Poland
+  country: Poland
+  lat: 50.2649
+  lng: 19.0238
+  field: [infosec, grc, privacy, threat-intel]
+  kind: business
+  about: European Cybersecurity Forum, a large Central/Eastern European event.
+  url: https://www.cybersecforum.eu/2026/
+
+- name: InfoSec World 2026
+  start: 2026-10-11
+  end: 2026-10-15
+  location: Orlando, USA
+  country: USA
+  lat: 28.5383
+  lng: -81.3792
+  field: [infosec, grc, defensive, threat-intel, cloud]
+  kind: business
+  about: CISO and practitioner conference at Gaylord Palms Resort.
+  url: https://www.infosecworldusa.com/
+
+- name: Cybertech Europe 2026
+  start: 2026-10-13
+  end: 2026-10-14
+  location: Rome, Italy
+  country: Italy
+  lat: 41.9028
+  lng: 12.4964
+  field: [infosec, grc, threat-intel, cloud]
+  kind: business
+  about: European edition of the Cybertech cyber industry expo.
+  url: https://italy.cybertechconference.com/
+
+# --- Threat intel, OSINT, offensive ---
+
+- name: x33fcon 2026
+  start: 2026-06-11
+  end: 2026-06-12
+  location: Gdynia, Poland
+  country: Poland
+  lat: 54.5189
+  lng: 18.5305
+  field: [infosec, offensive, defensive, threat-intel]
+  kind: community
+  about: Purple-teaming conference for red and blue team collaboration.
+  url: https://www.x33fcon.com/
+
+- name: FIRST Annual Conference 2026
+  start: 2026-06-14
+  end: 2026-06-19
+  location: Denver, USA
+  country: USA
+  lat: 39.7392
+  lng: -104.9903
+  field: [infosec, threat-intel, defensive]
+  kind: industry
+  about: Forum of Incident Response and Security Teams annual conference.
+  url: https://www.first.org/conference/2026/
+
+- name: SANS OSINT Summit Amsterdam 2026
+  start: 2026-06-15
+  end: 2026-06-16
+  location: Amsterdam, Netherlands
+  country: Netherlands
+  lat: 52.3676
+  lng: 4.9041
+  field: [infosec, osint]
+  kind: industry
+  about: SANS Open-Source Intelligence Summit, Europe edition.
+  url: https://www.sans.org/cyber-security-training-events/osint-amsterdam-2026
+
+- name: REcon 2026
+  start: 2026-06-19
+  end: 2026-06-21
+  location: Montreal, Canada
+  country: Canada
+  lat: 45.5019
+  lng: -73.5674
+  field: [infosec, offensive, hardware]
+  kind: community
+  about: Reverse engineering and offensive security conference.
+  url: https://recon.cx/2026/
+
+- name: fwd:cloudsec Europe 2026
+  start: 2026-09-07
+  end: 2026-09-08
+  location: London, United Kingdom
+  country: United Kingdom
+  lat: 51.5074
+  lng: -0.1278
+  field: [infosec, cloud, attack-surface]
+  kind: community
+  about: Non-profit cloud security conference, Europe edition.
+  url: https://fwdcloudsec.org/conference/europe/
+
+- name: LABScon 2026
+  start: 2026-09-16
+  end: 2026-09-19
+  location: Scottsdale, USA
+  country: USA
+  lat: 33.4942
+  lng: -111.9261
+  field: [infosec, threat-intel]
+  kind: industry
+  about: Invite-only security research and threat-intelligence conference.
+  url: https://www.labscon.io/
+
+- name: Hexacon 2026
+  start: 2026-10-16
+  end: 2026-10-17
+  location: Paris, France
+  country: France
+  lat: 48.8566
+  lng: 2.3522
+  field: [infosec, offensive]
+  kind: community
+  about: Offensive security conference (exploitation, vulnerability research).
+  url: https://www.hexacon.fr/
+
+- name: hardwear.io NL 2026
+  start: 2026-11-16
+  end: 2026-11-20
+  location: Amsterdam, Netherlands
+  country: Netherlands
+  lat: 52.3676
+  lng: 4.9041
+  field: [infosec, offensive, hardware]
+  kind: industry
+  about: Hardware security conference and training, Netherlands edition.
+  url: https://hardwear.io/nl-2026/
+
+# --- MEA cybersecurity ---
+
+- name: GISEC Global 2026
+  start: 2026-09-21
+  end: 2026-09-23
+  location: Dubai, United Arab Emirates
+  country: United Arab Emirates
+  lat: 25.2048
+  lng: 55.2708
+  field:
+    [infosec, offensive, defensive, threat-intel, attack-surface, government]
+  kind: business
+  about: The Arab world's largest cybersecurity exhibition and conference.
+  url: https://gisec.ae/
+
+- name: LEAP 2026
+  start: 2026-08-31
+  end: 2026-09-03
+  location: Riyadh, Saudi Arabia
+  country: Saudi Arabia
+  lat: 24.7136
+  lng: 46.6753
+  field: [infosec, government]
+  kind: business
+  about: Large Saudi technology event with a major cybersecurity presence.
+  url: https://onegiantleap.com/
+
+- name: Cyberweek Africa 2026
+  start: 2026-10-27
+  end: 2026-10-30
+  location: Nairobi, Kenya
+  country: Kenya
+  lat: -1.2921
+  lng: 36.8219
+  field: [infosec, defensive, threat-intel, grc]
+  kind: industry
+  about: CISO-focused East Africa conference at KICC.
+  url: https://www.cyberweekafrica.com/
+
+- name: Africa Cyber Defense Forum 2026
+  start: 2026-11-02
+  end: 2026-11-06
+  location: Nairobi, Kenya
+  country: Kenya
+  lat: -1.2921
+  lng: 36.8219
+  field: [infosec, defensive, threat-intel, government, defense, grc]
+  kind: industry
+  about: Pan-African cyber defense forum for leaders and policymakers.
+  url: https://africacyberdefenseforum.com/
+
+- name: Cyber Week Tel Aviv 2026
+  start: 2026-11-09
+  end: 2026-11-12
+  location: Tel Aviv, Israel
+  country: Israel
+  lat: 32.0853
+  lng: 34.7818
+  field: [infosec, offensive, defensive, threat-intel, government]
+  kind: industry
+  about: Israel's flagship cyber conference at Tel Aviv University.
+  url: https://cyberweektau.com/
+
+- name: DEF CON Middle East 2026
+  start: 2026-11-11
+  end: 2026-11-12
+  location: Manama, Bahrain
+  country: Bahrain
+  lat: 26.2285
+  lng: 50.5860
+  field: [infosec, offensive, osint]
+  kind: community
+  about: First full-scale DEF CON edition in the Middle East.
+  url: https://defcon.org/
+
+- name: Cairo ICT 2026
+  start: 2026-11-08
+  end: 2026-11-11
+  location: Cairo, Egypt
+  country: Egypt
+  lat: 30.0444
+  lng: 31.2357
+  field: [infosec, government]
+  kind: business
+  about: Egypt's national ICT trade show with cybersecurity tracks.
+  url: https://cairoict.com/
+
+- name: GITEX Global 2026
+  start: 2026-12-07
+  end: 2026-12-11
+  location: Dubai, United Arab Emirates
+  country: United Arab Emirates
+  lat: 25.2048
+  lng: 55.2708
+  field: [infosec, government]
+  kind: business
+  about:
+    One of the largest global tech trade shows, with a cybersecurity vertical.
+  url: https://www.gitex.com/
+
+- name: Intersec Dubai 2027
+  start: 2027-01-12
+  end: 2027-01-14
+  location: Dubai, United Arab Emirates
+  country: United Arab Emirates
+  lat: 25.2048
+  lng: 55.2708
+  field: [infosec, defensive, government, defense]
+  kind: business
+  about: Security, safety and fire-protection trade show with a cyber section.
+  url: https://intersecglobal.ae.messefrankfurt.com/dubai/en.html
+
+# --- Industry verticals: ICS/OT, health, aviation, finance, etc. ---
+
+- name: FS-ISAC EMEA Summit 2026
+  start: 2026-06-15
+  end: 2026-06-18
+  location: The Hague, Netherlands
+  country: Netherlands
+  lat: 52.0705
+  lng: 4.3007
+  field: [infosec, finance]
+  kind: industry
+  about: Financial Services ISAC EMEA Summit.
+  url: https://www.fsisac.com/events/2026-emea-summit
+
+- name: Maritime Cyber Resilience Summit Americas 2026
+  start: 2026-06-23
+  end: 2026-06-25
+  location: Orlando, USA
+  country: USA
+  lat: 28.5383
+  lng: -81.3792
+  field: [infosec, maritime]
+  kind: community
+  about: MTS-ISAC Maritime Cyber Resilience Summit, Americas edition.
+  url: https://www.mtsisac.org/maritime-cybersecurity-summit
+
+- name: AFCEA TechNet Augusta 2026
+  start: 2026-08-17
+  end: 2026-08-20
+  location: Augusta, USA
+  country: USA
+  lat: 33.4735
+  lng: -82.0105
+  field: [infosec, defense]
+  kind: industry
+  about: AFCEA TechNet Augusta (US Army Cyber Center of Excellence).
+  url: https://events.afcea.org/Augusta26/Public/enter.aspx
+
+- name: Billington CyberSecurity Summit 2026
+  start: 2026-09-08
+  end: 2026-09-10
+  location: Washington, USA
+  country: USA
+  lat: 38.9072
+  lng: -77.0369
+  field: [infosec, government]
+  kind: industry
+  about: Billington CyberSecurity Summit, US government and military focus.
+  url: https://billingtoncybersummit.com/
+
+- name: Health-ISAC CISO Summit 2026
+  start: 2026-09-16
+  end: 2026-09-18
+  location: Colorado Springs, USA
+  country: USA
+  lat: 38.8339
+  lng: -104.8214
+  field: [infosec, healthcare]
+  kind: community
+  about: Health-ISAC CISO Summit for healthcare security leadership.
+  url: https://health-isac.org/summits/
+
+- name: Aviation Cybersecurity Summit 2026
+  start: 2026-09-29
+  end: 2026-10-02
+  location: Vancouver, Canada
+  country: Canada
+  lat: 49.2827
+  lng: -123.1207
+  field: [infosec, aviation]
+  kind: community
+  about: Aviation ISAC (A-ISAC) annual Aviation Cybersecurity Summit.
+  url: https://www.a-isac.com/
+
+- name: ICS Cybersecurity Conference 2026
+  start: 2026-10-06
+  end: 2026-10-08
+  location: Nashville, USA
+  country: USA
+  lat: 36.1627
+  lng: -86.7816
+  field: [infosec, ics-ot]
+  kind: industry
+  about: SecurityWeek Industrial Control Systems Cybersecurity Conference.
+  url: https://www.icscybersecurityconference.com/
+
+- name: Auto-ISAC Cybersecurity Summit 2026
+  start: 2026-10-06
+  end: 2026-10-09
+  location: Novi, USA
+  country: USA
+  lat: 42.4806
+  lng: -83.4755
+  field: [infosec, automotive]
+  kind: community
+  about: Automotive ISAC annual cybersecurity summit.
+  url: https://automotiveisac.com/
+
+- name: Health-ISAC European Summit 2026
+  start: 2026-10-12
+  end: 2026-10-16
+  location: Crete, Greece
+  country: Greece
+  lat: 35.3387
+  lng: 25.1442
+  field: [infosec, healthcare]
+  kind: community
+  about: Health Information Sharing and Analysis Center European Summit.
+  url: https://health-isac.org/summits/
+
+- name: GridSecCon 2026
+  start: 2026-10-20
+  end: 2026-10-23
+  location: Orlando, USA
+  country: USA
+  lat: 28.5383
+  lng: -81.3792
+  field: [infosec, energy]
+  kind: community
+  about: NERC / E-ISAC Grid Security Conference for the electricity sub-sector.
+  url: https://www.eisac.com/s/gridseccon
+
+- name: CS3STHLM 2026
+  start: 2026-10-24
+  end: 2026-10-26
+  location: Stockholm, Sweden
+  country: Sweden
+  lat: 59.3293
+  lng: 18.0686
+  field: [infosec, ics-ot]
+  kind: community
+  about: Stockholm summit on cyber security in SCADA and ICS (formerly 4SICS).
+  url: https://cs3sthlm.se/
+
+- name: FS-ISAC Americas Fall Summit 2026
+  start: 2026-10-26
+  end: 2026-10-29
+  location: Austin, USA
+  country: USA
+  lat: 30.2672
+  lng: -97.7431
+  field: [infosec, finance]
+  kind: industry
+  about: Financial Services ISAC Americas Fall Summit.
+  url: https://www.fsisac.com/events/americas-fall-summit
+
+- name: European Cyber Week 2026
+  start: 2026-11-16
+  end: 2026-11-19
+  location: Rennes, France
+  country: France
+  lat: 48.1173
+  lng: -1.6778
+  field: [infosec, defense, government]
+  kind: community
+  about: European Cyber Week (ECW), cyber and defence event in Rennes.
+  url: https://www.european-cyber-week.eu/en
+
+- name: escar Europe 2026
+  start: 2026-11-17
+  end: 2026-11-18
+  location: Bonn, Germany
+  country: Germany
+  lat: 50.7374
+  lng: 7.0982
+  field: [infosec, automotive]
+  kind: industry
+  about: escar (Embedded Security in Cars) Europe, automotive cyber conference.
+  url: https://escar.info/escar-europe
+
+- name: Health-ISAC Fall Americas Summit 2026
+  start: 2026-11-30
+  end: 2026-12-04
+  location: Tucson, USA
+  country: USA
+  lat: 32.2226
+  lng: -110.9747
+  field: [infosec, healthcare]
+  kind: community
+  about: Health-ISAC Fall Americas Summit (healthcare threat sharing).
+  url: https://health-isac.org/summits/
+
+- name: S4x27
+  start: 2027-02-08
+  end: 2027-02-11
+  location: Tampa, USA
+  country: USA
+  lat: 27.9506
+  lng: -82.4572
+  field: [infosec, ics-ot]
+  kind: industry
+  about: S4 ICS/OT security conference, the largest OT security event.
+  url: https://s4xevents.com/
+
+- name: HIMSS27 Global Health Conference
+  start: 2027-04-05
+  end: 2027-04-08
+  location: Chicago, USA
+  country: USA
+  lat: 41.8781
+  lng: -87.6298
+  field: [infosec, healthcare]
+  kind: industry
+  about:
+    HIMSS Global Health Conference and Exhibition, with a cybersecurity track.
+  url: https://www.himssconference.com/
